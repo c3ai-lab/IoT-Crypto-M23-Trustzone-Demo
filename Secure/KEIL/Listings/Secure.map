@@ -1,0 +1,1660 @@
+Component: ARM Compiler 6.10.1 Tool: armlink [5d142800]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(.text.S_get_secure_value) refers to printfa.o(i.__0printf) for printf
+    main.o(.text.S_get_secure_value) refers to fgets.o(i.fgets) for fgets
+    main.o(.text.S_get_secure_value) refers to main.o(.rodata.str1.1) for .L.str
+    main.o(.text.S_get_secure_value) refers to main.o(.bss.secret_value) for secret_value
+    main.o(.text.S_get_secure_value) refers to retarget.o(.bss.__stdin) for __stdin
+    main.o(.ARM.exidx.text.S_get_secure_value) refers to main.o(.text.S_get_secure_value) for [Anonymous Symbol]
+    main.o(.text.S_get_cipher_value) refers to printfa.o(i.__0printf) for printf
+    main.o(.text.S_get_cipher_value) refers to fgets.o(i.fgets) for fgets
+    main.o(.text.S_get_cipher_value) refers to main.o(.text.hex_to_byte) for hex_to_byte
+    main.o(.text.S_get_cipher_value) refers to main.o(.rodata.str1.1) for .L.str.2
+    main.o(.text.S_get_cipher_value) refers to retarget.o(.bss.__stdin) for __stdin
+    main.o(.text.S_get_cipher_value) refers to main.o(.bss.cipher_value) for cipher_value
+    main.o(.ARM.exidx.text.S_get_cipher_value) refers to main.o(.text.S_get_cipher_value) for [Anonymous Symbol]
+    main.o(.text.hex_to_byte) refers to strlen.o(.text) for strlen
+    main.o(.text.hex_to_byte) refers to sscanf.o(.text) for sscanf
+    main.o(.text.hex_to_byte) refers to main.o(.rodata.str1.1) for .L.str.15
+    main.o(.ARM.exidx.text.hex_to_byte) refers to main.o(.text.hex_to_byte) for [Anonymous Symbol]
+    main.o(.text.S_encrypt_secure_value) refers to main.o(.text.encrypt) for encrypt
+    main.o(.ARM.exidx.text.S_encrypt_secure_value) refers to main.o(.text.S_encrypt_secure_value) for [Anonymous Symbol]
+    main.o(.text.encrypt) refers to crypto.o(.text.AES_Open) for AES_Open
+    main.o(.text.encrypt) refers to crypto.o(.text.AES_SetKey) for AES_SetKey
+    main.o(.text.encrypt) refers to crypto.o(.text.AES_SetInitVect) for AES_SetInitVect
+    main.o(.text.encrypt) refers to strlen.o(.text) for strlen
+    main.o(.text.encrypt) refers to crypto.o(.text.AES_SetDMATransfer) for AES_SetDMATransfer
+    main.o(.text.encrypt) refers to printfa.o(i.__0printf) for printf
+    main.o(.text.encrypt) refers to crypto.o(.text.AES_Start) for AES_Start
+    main.o(.text.encrypt) refers to main.o(.bss.is_encrypt) for is_encrypt
+    main.o(.text.encrypt) refers to main.o(.bss.aes_key) for aes_key
+    main.o(.text.encrypt) refers to main.o(.bss.aes_iv) for aes_iv
+    main.o(.text.encrypt) refers to main.o(.bss.secret_value) for secret_value
+    main.o(.text.encrypt) refers to main.o(.bss.cipher_value) for cipher_value
+    main.o(.text.encrypt) refers to main.o(.rodata.str1.1) for .L.str.9
+    main.o(.ARM.exidx.text.encrypt) refers to main.o(.text.encrypt) for [Anonymous Symbol]
+    main.o(.text.S_decrypt_cipher_value) refers to main.o(.text.decrypt) for decrypt
+    main.o(.ARM.exidx.text.S_decrypt_cipher_value) refers to main.o(.text.S_decrypt_cipher_value) for [Anonymous Symbol]
+    main.o(.text.decrypt) refers to crypto.o(.text.AES_Open) for AES_Open
+    main.o(.text.decrypt) refers to crypto.o(.text.AES_SetKey) for AES_SetKey
+    main.o(.text.decrypt) refers to crypto.o(.text.AES_SetInitVect) for AES_SetInitVect
+    main.o(.text.decrypt) refers to strlen.o(.text) for strlen
+    main.o(.text.decrypt) refers to crypto.o(.text.AES_SetDMATransfer) for AES_SetDMATransfer
+    main.o(.text.decrypt) refers to printfa.o(i.__0printf) for printf
+    main.o(.text.decrypt) refers to crypto.o(.text.AES_Start) for AES_Start
+    main.o(.text.decrypt) refers to main.o(.bss.is_encrypt) for is_encrypt
+    main.o(.text.decrypt) refers to main.o(.bss.aes_key) for aes_key
+    main.o(.text.decrypt) refers to main.o(.bss.aes_iv) for aes_iv
+    main.o(.text.decrypt) refers to main.o(.bss.cipher_value) for cipher_value
+    main.o(.text.decrypt) refers to main.o(.bss.secret_value) for secret_value
+    main.o(.text.decrypt) refers to main.o(.rodata.str1.1) for .L.str.10
+    main.o(.ARM.exidx.text.decrypt) refers to main.o(.text.decrypt) for [Anonymous Symbol]
+    main.o(.text.CRPT_IRQHandler) refers to printfa.o(i.__0printf) for printf
+    main.o(.text.CRPT_IRQHandler) refers to strlen.o(.text) for strlen
+    main.o(.text.CRPT_IRQHandler) refers to main.o(.text.print_hex) for print_hex
+    main.o(.text.CRPT_IRQHandler) refers to main.o(.rodata.str1.1) for .L.str.3
+    main.o(.text.CRPT_IRQHandler) refers to main.o(.bss.is_encrypt) for is_encrypt
+    main.o(.text.CRPT_IRQHandler) refers to main.o(.bss.secret_value) for secret_value
+    main.o(.text.CRPT_IRQHandler) refers to main.o(.bss.cipher_value) for cipher_value
+    main.o(.ARM.exidx.text.CRPT_IRQHandler) refers to main.o(.text.CRPT_IRQHandler) for [Anonymous Symbol]
+    main.o(.text.print_hex) refers to printfa.o(i.__0printf) for printf
+    main.o(.text.print_hex) refers to main.o(.rodata.str1.1) for .L.str.14
+    main.o(.ARM.exidx.text.print_hex) refers to main.o(.text.print_hex) for [Anonymous Symbol]
+    main.o(.text.main) refers to printfa.o(i.__0printf) for printf
+    main.o(.text.main) refers to main.o(.text.SYS_UnlockReg) for SYS_UnlockReg
+    main.o(.text.main) refers to main.o(.text.init_system) for init_system
+    main.o(.text.main) refers to main.o(.text.init_debug_port) for init_debug_port
+    main.o(.text.main) refers to main.o(.text.itsc_startup) for itsc_startup
+    main.o(.text.main) refers to main.o(.text.init_crypto) for init_crypto
+    main.o(.text.main) refers to main.o(.text.SYS_LockReg) for SYS_LockReg
+    main.o(.text.main) refers to main.o(.text.init_non_secure) for init_non_secure
+    main.o(.text.main) refers to main.o(.rodata.str1.1) for .L.str.7
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.SYS_UnlockReg) refers to main.o(.text.SYS_UnlockReg) for [Anonymous Symbol]
+    main.o(.text.init_system) refers to gpio.o(.text.GPIO_SetMode) for GPIO_SetMode
+    main.o(.text.init_system) refers to system_m2351.o(.data.PllClock) for PllClock
+    main.o(.text.init_system) refers to system_m2351.o(.data.SystemCoreClock) for SystemCoreClock
+    main.o(.text.init_system) refers to system_m2351.o(.data.CyclesPerUs) for CyclesPerUs
+    main.o(.ARM.exidx.text.init_system) refers to main.o(.text.init_system) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.init_debug_port) refers to main.o(.text.init_debug_port) for [Anonymous Symbol]
+    main.o(.text.init_crypto) refers to main.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    main.o(.text.init_crypto) refers to mkrom_api.o(.text.BL_RandomInit) for BL_RandomInit
+    main.o(.text.init_crypto) refers to mkrom_api.o(.text.BL_Random) for BL_Random
+    main.o(.text.init_crypto) refers to main.o(.bss.aes_key) for aes_key
+    main.o(.ARM.exidx.text.init_crypto) refers to main.o(.text.init_crypto) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.SYS_LockReg) refers to main.o(.text.SYS_LockReg) for [Anonymous Symbol]
+    main.o(.text.init_non_secure) refers to printfa.o(i.__0printf) for printf
+    main.o(.text.init_non_secure) refers to main.o(.rodata.str1.1) for .L.str.11
+    main.o(.ARM.exidx.text.init_non_secure) refers to main.o(.text.init_non_secure) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to main.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
+    main.o(.text.itsc_startup) refers to printfa.o(i.__0printf) for printf
+    main.o(.text.itsc_startup) refers to main.o(.rodata.str1.1) for .L.str.6
+    main.o(.ARM.exidx.text.itsc_startup) refers to main.o(.text.itsc_startup) for [Anonymous Symbol]
+    system_m2351.o(.text.SystemCoreClockUpdate) refers to anon$$obj.o(Veneer$$CMSE) for CLK_GetPLLClockFreq
+    system_m2351.o(.text.SystemCoreClockUpdate) refers to system_m2351.o(.data.PllClock) for PllClock
+    system_m2351.o(.text.SystemCoreClockUpdate) refers to system_m2351.o(.data.SystemCoreClock) for SystemCoreClock
+    system_m2351.o(.text.SystemCoreClockUpdate) refers to system_m2351.o(.data.CyclesPerUs) for CyclesPerUs
+    system_m2351.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_m2351.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    system_m2351.o(.text.SystemInit) refers to system_m2351.o(.text.TZ_SAU_Setup) for TZ_SAU_Setup
+    system_m2351.o(.text.SystemInit) refers to system_m2351.o(.text.SCU_Setup) for SCU_Setup
+    system_m2351.o(.text.SystemInit) refers to system_m2351.o(.text.FMC_NSBA_Setup) for FMC_NSBA_Setup
+    system_m2351.o(.text.SystemInit) refers to startup_m2351.o(RESET) for __Vectors
+    system_m2351.o(.ARM.exidx.text.SystemInit) refers to system_m2351.o(.text.SystemInit) for [Anonymous Symbol]
+    system_m2351.o(.ARM.exidx.text.TZ_SAU_Setup) refers to system_m2351.o(.text.TZ_SAU_Setup) for [Anonymous Symbol]
+    system_m2351.o(.ARM.exidx.text.SCU_Setup) refers to system_m2351.o(.text.SCU_Setup) for [Anonymous Symbol]
+    system_m2351.o(.text.FMC_NSBA_Setup) refers to system_m2351.o(.text.SYS_UnlockReg) for SYS_UnlockReg
+    system_m2351.o(.ARM.exidx.text.FMC_NSBA_Setup) refers to system_m2351.o(.text.FMC_NSBA_Setup) for [Anonymous Symbol]
+    system_m2351.o(.ARM.exidx.text.SYS_UnlockReg) refers to system_m2351.o(.text.SYS_UnlockReg) for [Anonymous Symbol]
+    startup_m2351.o(STACK) refers (Special) to retarget.o(.text.SendChar_ToUART) for SendChar_ToUART
+    startup_m2351.o(HEAP) refers (Special) to retarget.o(.text.SendChar_ToUART) for SendChar_ToUART
+    startup_m2351.o(RESET) refers (Special) to retarget.o(.text.SendChar_ToUART) for SendChar_ToUART
+    startup_m2351.o(RESET) refers to startup_m2351.o(STACK) for __initial_sp
+    startup_m2351.o(RESET) refers to startup_m2351.o(.text) for Reset_Handler
+    startup_m2351.o(RESET) refers to main.o(.text.CRPT_IRQHandler) for CRPT_IRQHandler
+    startup_m2351.o(.text) refers (Special) to retarget.o(.text.SendChar_ToUART) for SendChar_ToUART
+    startup_m2351.o(.text) refers to system_m2351.o(.text.SystemInit) for SystemInit
+    startup_m2351.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    startup_m2351.o(.text) refers to retarget.o(.text.ProcessHardFault) for ProcessHardFault
+    startup_m2351.o(.text) refers to retarget.o(.text.SH_Return) for SH_Return
+    retarget.o(.ARM.exidx.text.ProcessHardFault) refers to retarget.o(.text.ProcessHardFault) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.SH_Return) refers to retarget.o(.text.SH_Return) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.SendChar_ToUART) refers to retarget.o(.text.SendChar_ToUART) for [Anonymous Symbol]
+    retarget.o(.text.SendChar) refers to retarget.o(.text.SendChar_ToUART) for SendChar_ToUART
+    retarget.o(.ARM.exidx.text.SendChar) refers to retarget.o(.text.SendChar) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.GetChar) refers to retarget.o(.text.GetChar) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.kbhit) refers to retarget.o(.text.kbhit) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.IsDebugFifoEmpty) refers to retarget.o(.text.IsDebugFifoEmpty) for [Anonymous Symbol]
+    retarget.o(.text._ttywrch) refers to retarget.o(.text.SendChar) for SendChar
+    retarget.o(.ARM.exidx.text._ttywrch) refers to retarget.o(.text._ttywrch) for [Anonymous Symbol]
+    retarget.o(.text.fputc) refers to retarget.o(.text.SendChar) for SendChar
+    retarget.o(.ARM.exidx.text.fputc) refers to retarget.o(.text.fputc) for [Anonymous Symbol]
+    retarget.o(.text.fgetc) refers to retarget.o(.text.GetChar) for GetChar
+    retarget.o(.ARM.exidx.text.fgetc) refers to retarget.o(.text.fgetc) for [Anonymous Symbol]
+    retarget.o(.ARM.exidx.text.ferror) refers to retarget.o(.text.ferror) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_DisableCKO) refers to clk.o(.text.CLK_DisableCKO) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_EnableCKO) refers to clk.o(.text.CLK_EnableCKO) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_PowerDown) refers to clk.o(.text.CLK_PowerDown) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_Idle) refers to clk.o(.text.CLK_Idle) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_GetHXTFreq) refers to clk.o(.text.CLK_GetHXTFreq) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_GetLXTFreq) refers to clk.o(.text.CLK_GetLXTFreq) for [Anonymous Symbol]
+    clk.o(.text.CLK_GetHCLKFreq) refers to system_m2351.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(.text.CLK_GetHCLKFreq) refers to system_m2351.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.ARM.exidx.text.CLK_GetHCLKFreq) refers to clk.o(.text.CLK_GetHCLKFreq) for [Anonymous Symbol]
+    clk.o(.text.CLK_GetPCLK0Freq) refers to system_m2351.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(.text.CLK_GetPCLK0Freq) refers to system_m2351.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.ARM.exidx.text.CLK_GetPCLK0Freq) refers to clk.o(.text.CLK_GetPCLK0Freq) for [Anonymous Symbol]
+    clk.o(.text.CLK_GetPCLK1Freq) refers to system_m2351.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(.text.CLK_GetPCLK1Freq) refers to system_m2351.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.ARM.exidx.text.CLK_GetPCLK1Freq) refers to clk.o(.text.CLK_GetPCLK1Freq) for [Anonymous Symbol]
+    clk.o(.text.CLK_GetCPUFreq) refers to clk.o(.rodata.cst32) for .LCLK_GetCPUFreq.au32ClkTbl
+    clk.o(.text.CLK_GetCPUFreq) refers to system_m2351.o(.data.PllClock) for PllClock
+    clk.o(.text.CLK_GetCPUFreq) refers to system_m2351.o(.data.SystemCoreClock) for SystemCoreClock
+    clk.o(.text.CLK_GetCPUFreq) refers to system_m2351.o(.data.CyclesPerUs) for CyclesPerUs
+    clk.o(.ARM.exidx.text.CLK_GetCPUFreq) refers to clk.o(.text.CLK_GetCPUFreq) for [Anonymous Symbol]
+    clk.o(.text.CLK_SetCoreClock) refers to clk.o(.text.CLK_WaitClockReady) for CLK_WaitClockReady
+    clk.o(.text.CLK_SetCoreClock) refers to clk.o(.text.CLK_EnablePLL) for CLK_EnablePLL
+    clk.o(.text.CLK_SetCoreClock) refers to clk.o(.text.CLK_SetHCLK) for CLK_SetHCLK
+    clk.o(.ARM.exidx.text.CLK_SetCoreClock) refers to clk.o(.text.CLK_SetCoreClock) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_WaitClockReady) refers to clk.o(.text.CLK_WaitClockReady) for [Anonymous Symbol]
+    clk.o(.text.CLK_EnablePLL) refers to clk.o(.text.CLK_DisablePLL) for CLK_DisablePLL
+    clk.o(.text.CLK_EnablePLL) refers to clk.o(.text.CLK_WaitClockReady) for CLK_WaitClockReady
+    clk.o(.ARM.exidx.text.CLK_EnablePLL) refers to clk.o(.text.CLK_EnablePLL) for [Anonymous Symbol]
+    clk.o(.text.CLK_SetHCLK) refers to clk.o(.text.CLK_WaitClockReady) for CLK_WaitClockReady
+    clk.o(.text.CLK_SetHCLK) refers to system_m2351.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    clk.o(.ARM.exidx.text.CLK_SetHCLK) refers to clk.o(.text.CLK_SetHCLK) for [Anonymous Symbol]
+    clk.o(.text.CLK_SetModuleClock) refers to clk.o(.rodata.cst16) for .LCLK_SetModuleClock.au32SelTbl
+    clk.o(.ARM.exidx.text.CLK_SetModuleClock) refers to clk.o(.text.CLK_SetModuleClock) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_SetSysTickClockSrc) refers to clk.o(.text.CLK_SetSysTickClockSrc) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_EnableXtalRC) refers to clk.o(.text.CLK_EnableXtalRC) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_DisableXtalRC) refers to clk.o(.text.CLK_DisableXtalRC) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_EnableModuleClock) refers to clk.o(.text.CLK_EnableModuleClock) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_DisableModuleClock) refers to clk.o(.text.CLK_DisableModuleClock) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_DisablePLL) refers to clk.o(.text.CLK_DisablePLL) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_EnableSysTick) refers to clk.o(.text.CLK_EnableSysTick) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_DisableSysTick) refers to clk.o(.text.CLK_DisableSysTick) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_SetPowerDownMode) refers to clk.o(.text.CLK_SetPowerDownMode) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_EnableDPDWKPin) refers to clk.o(.text.CLK_EnableDPDWKPin) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_GetPMUWKSrc) refers to clk.o(.text.CLK_GetPMUWKSrc) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_EnableSPDWKPin) refers to clk.o(.text.CLK_EnableSPDWKPin) for [Anonymous Symbol]
+    clk.o(.ARM.exidx.text.CLK_GetPLLClockFreq) refers to clk.o(.text.CLK_GetPLLClockFreq) for [Anonymous Symbol]
+    clk.o(.text.CLK_GetModuleClockSource) refers to clk.o(.rodata.cst16) for .LCLK_GetModuleClockSource.au32SelTbl
+    clk.o(.ARM.exidx.text.CLK_GetModuleClockSource) refers to clk.o(.text.CLK_GetModuleClockSource) for [Anonymous Symbol]
+    clk.o(.text.CLK_GetModuleClockDivider) refers to clk.o(.rodata.cst16) for .LCLK_GetModuleClockDivider.au32DivTbl
+    clk.o(.ARM.exidx.text.CLK_GetModuleClockDivider) refers to clk.o(.text.CLK_GetModuleClockDivider) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_SetMode) refers to gpio.o(.text.GPIO_SetMode) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_EnableInt) refers to gpio.o(.text.GPIO_EnableInt) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_DisableInt) refers to gpio.o(.text.GPIO_DisableInt) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_SetSlewCtl) refers to gpio.o(.text.GPIO_SetSlewCtl) for [Anonymous Symbol]
+    gpio.o(.ARM.exidx.text.GPIO_SetPullCtl) refers to gpio.o(.text.GPIO_SetPullCtl) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.PRNG_Open) refers to crypto.o(.text.PRNG_Open) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.PRNG_Start) refers to crypto.o(.text.PRNG_Start) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.PRNG_Read) refers to crypto.o(.text.PRNG_Read) for [Anonymous Symbol]
+    crypto.o(.text.AES_Open) refers to crypto.o(.bss.g_AES_CTL) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.AES_Open) refers to crypto.o(.text.AES_Open) for [Anonymous Symbol]
+    crypto.o(.text.AES_Start) refers to crypto.o(.bss.g_AES_CTL) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.AES_Start) refers to crypto.o(.text.AES_Start) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.AES_SetKey) refers to crypto.o(.text.AES_SetKey) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.AES_SetInitVect) refers to crypto.o(.text.AES_SetInitVect) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.AES_SetDMATransfer) refers to crypto.o(.text.AES_SetDMATransfer) for [Anonymous Symbol]
+    crypto.o(.text.TDES_Open) refers to crypto.o(.bss.g_TDES_CTL) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.TDES_Open) refers to crypto.o(.text.TDES_Open) for [Anonymous Symbol]
+    crypto.o(.text.TDES_Start) refers to crypto.o(.bss.g_TDES_CTL) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.TDES_Start) refers to crypto.o(.text.TDES_Start) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.TDES_SetKey) refers to crypto.o(.text.TDES_SetKey) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.TDES_SetInitVect) refers to crypto.o(.text.TDES_SetInitVect) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.TDES_SetDMATransfer) refers to crypto.o(.text.TDES_SetDMATransfer) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.SHA_Open) refers to crypto.o(.text.SHA_Open) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.SHA_Start) refers to crypto.o(.text.SHA_Start) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.SHA_SetDMATransfer) refers to crypto.o(.text.SHA_SetDMATransfer) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.SHA_Read) refers to crypto.o(.text.SHA_Read) for [Anonymous Symbol]
+    crypto.o(.text.ECC_DriverISR) refers to crypto.o(.bss.g_ECC_done) for g_ECC_done
+    crypto.o(.text.ECC_DriverISR) refers to crypto.o(.bss.g_ECCERR_done) for g_ECCERR_done
+    crypto.o(.ARM.exidx.text.ECC_DriverISR) refers to crypto.o(.text.ECC_DriverISR) for [Anonymous Symbol]
+    crypto.o(.text.ECC_IsPrivateKeyValid) refers to crypto.o(.text.get_curve) for get_curve
+    crypto.o(.text.ECC_IsPrivateKeyValid) refers to strlen.o(.text) for strlen
+    crypto.o(.text.ECC_IsPrivateKeyValid) refers to crypto.o(.text.get_nibble_value) for get_nibble_value
+    crypto.o(.text.ECC_IsPrivateKeyValid) refers to crypto.o(.bss.pCurve) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.ECC_IsPrivateKeyValid) refers to crypto.o(.text.ECC_IsPrivateKeyValid) for [Anonymous Symbol]
+    crypto.o(.text.get_curve) refers to memcpya.o(.text) for __aeabi_memcpy4
+    crypto.o(.text.get_curve) refers to crypto.o(.rodata._Curve) for _Curve
+    crypto.o(.text.get_curve) refers to crypto.o(.bss.Curve_Copy) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.get_curve) refers to crypto.o(.text.get_curve) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.get_nibble_value) refers to crypto.o(.text.get_nibble_value) for [Anonymous Symbol]
+    crypto.o(.text.ECC_GeneratePublicKey) refers to crypto.o(.text.ecc_init_curve) for ecc_init_curve
+    crypto.o(.text.ECC_GeneratePublicKey) refers to crypto.o(.text.Hex2Reg) for Hex2Reg
+    crypto.o(.text.ECC_GeneratePublicKey) refers to crypto.o(.text.Reg2Hex) for Reg2Hex
+    crypto.o(.text.ECC_GeneratePublicKey) refers to crypto.o(.bss.pCurve) for [Anonymous Symbol]
+    crypto.o(.text.ECC_GeneratePublicKey) refers to crypto.o(.bss.g_ECCERR_done) for g_ECCERR_done
+    crypto.o(.text.ECC_GeneratePublicKey) refers to crypto.o(.bss.g_ECC_done) for g_ECC_done
+    crypto.o(.ARM.exidx.text.ECC_GeneratePublicKey) refers to crypto.o(.text.ECC_GeneratePublicKey) for [Anonymous Symbol]
+    crypto.o(.text.ecc_init_curve) refers to crypto.o(.text.get_curve) for get_curve
+    crypto.o(.text.ecc_init_curve) refers to crypto.o(.text.Hex2Reg) for Hex2Reg
+    crypto.o(.text.ecc_init_curve) refers to crypto.o(.text.dump_ecc_reg) for dump_ecc_reg
+    crypto.o(.text.ecc_init_curve) refers to crypto.o(.bss.pCurve) for [Anonymous Symbol]
+    crypto.o(.text.ecc_init_curve) refers to crypto.o(.rodata.str1.1) for .L.str
+    crypto.o(.ARM.exidx.text.ecc_init_curve) refers to crypto.o(.text.ecc_init_curve) for [Anonymous Symbol]
+    crypto.o(.text.Hex2Reg) refers to strlen.o(.text) for strlen
+    crypto.o(.text.Hex2Reg) refers to crypto.o(.text.ch2hex) for ch2hex
+    crypto.o(.ARM.exidx.text.Hex2Reg) refers to crypto.o(.text.Hex2Reg) for [Anonymous Symbol]
+    crypto.o(.text.Reg2Hex) refers to crypto.o(.text.get_Nth_nibble_char) for get_Nth_nibble_char
+    crypto.o(.ARM.exidx.text.Reg2Hex) refers to crypto.o(.text.Reg2Hex) for [Anonymous Symbol]
+    crypto.o(.text.ECC_GenerateSecretZ) refers to crypto.o(.text.ecc_init_curve) for ecc_init_curve
+    crypto.o(.text.ECC_GenerateSecretZ) refers to crypto.o(.text.Hex2RegEx) for Hex2RegEx
+    crypto.o(.text.ECC_GenerateSecretZ) refers to crypto.o(.text.Hex2Reg) for Hex2Reg
+    crypto.o(.text.ECC_GenerateSecretZ) refers to crypto.o(.text.Reg2Hex) for Reg2Hex
+    crypto.o(.text.ECC_GenerateSecretZ) refers to crypto.o(.bss.pCurve) for [Anonymous Symbol]
+    crypto.o(.text.ECC_GenerateSecretZ) refers to crypto.o(.bss.g_ECCERR_done) for g_ECCERR_done
+    crypto.o(.text.ECC_GenerateSecretZ) refers to crypto.o(.bss.g_ECC_done) for g_ECC_done
+    crypto.o(.ARM.exidx.text.ECC_GenerateSecretZ) refers to crypto.o(.text.ECC_GenerateSecretZ) for [Anonymous Symbol]
+    crypto.o(.text.Hex2RegEx) refers to strlen.o(.text) for strlen
+    crypto.o(.text.Hex2RegEx) refers to crypto.o(.text.ch2hex) for ch2hex
+    crypto.o(.ARM.exidx.text.Hex2RegEx) refers to crypto.o(.text.Hex2RegEx) for [Anonymous Symbol]
+    crypto.o(.text.ECC_GenerateSignature) refers to crypto.o(.text.ecc_init_curve) for ecc_init_curve
+    crypto.o(.text.ECC_GenerateSignature) refers to crypto.o(.text.Hex2Reg) for Hex2Reg
+    crypto.o(.text.ECC_GenerateSignature) refers to crypto.o(.text.run_ecc_codec) for run_ecc_codec
+    crypto.o(.text.ECC_GenerateSignature) refers to crypto.o(.text.Reg2Hex) for Reg2Hex
+    crypto.o(.text.ECC_GenerateSignature) refers to crypto.o(.bss.pCurve) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.ECC_GenerateSignature) refers to crypto.o(.text.ECC_GenerateSignature) for [Anonymous Symbol]
+    crypto.o(.text.run_ecc_codec) refers to crypto.o(.bss.pCurve) for [Anonymous Symbol]
+    crypto.o(.text.run_ecc_codec) refers to crypto.o(.bss.g_ECCERR_done) for g_ECCERR_done
+    crypto.o(.text.run_ecc_codec) refers to crypto.o(.bss.g_ECC_done) for g_ECC_done
+    crypto.o(.ARM.exidx.text.run_ecc_codec) refers to crypto.o(.text.run_ecc_codec) for [Anonymous Symbol]
+    crypto.o(.text.ECC_VerifySignature) refers to crypto.o(.text.ecc_init_curve) for ecc_init_curve
+    crypto.o(.text.ECC_VerifySignature) refers to crypto.o(.text.Hex2Reg) for Hex2Reg
+    crypto.o(.text.ECC_VerifySignature) refers to crypto.o(.text.run_ecc_codec) for run_ecc_codec
+    crypto.o(.text.ECC_VerifySignature) refers to crypto.o(.bss.pCurve) for [Anonymous Symbol]
+    crypto.o(.text.ECC_VerifySignature) refers to crypto.o(.text.Reg2Hex) for Reg2Hex
+    crypto.o(.text.ECC_VerifySignature) refers to strcasecmp.o(.text) for strcasecmp
+    crypto.o(.text.ECC_VerifySignature) refers to crypto.o(.bss.temp_hex_str) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.ECC_VerifySignature) refers to crypto.o(.text.ECC_VerifySignature) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.CurveCpy) refers to crypto.o(.text.CurveCpy) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.dump_ecc_reg) refers to crypto.o(.text.dump_ecc_reg) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.ch2hex) refers to crypto.o(.text.ch2hex) for [Anonymous Symbol]
+    crypto.o(.text.get_Nth_nibble_char) refers to crypto.o(.data.hex_char_tbl) for [Anonymous Symbol]
+    crypto.o(.ARM.exidx.text.get_Nth_nibble_char) refers to crypto.o(.text.get_Nth_nibble_char) for [Anonymous Symbol]
+    mkrom_api.o(.ARM.exidx.text.MKROM_Version) refers to mkrom_api.o(.text.MKROM_Version) for [Anonymous Symbol]
+    mkrom_api.o(.text.XAES_Open) refers to mkrom_api.o(.data.xAES_Open) for xAES_Open
+    mkrom_api.o(.ARM.exidx.text.XAES_Open) refers to mkrom_api.o(.text.XAES_Open) for [Anonymous Symbol]
+    mkrom_api.o(.text.XAES_Start) refers to mkrom_api.o(.data.xAES_Start) for xAES_Start
+    mkrom_api.o(.ARM.exidx.text.XAES_Start) refers to mkrom_api.o(.text.XAES_Start) for [Anonymous Symbol]
+    mkrom_api.o(.text.XAES_SetKey) refers to mkrom_api.o(.data.xAES_SetKey) for xAES_SetKey
+    mkrom_api.o(.ARM.exidx.text.XAES_SetKey) refers to mkrom_api.o(.text.XAES_SetKey) for [Anonymous Symbol]
+    mkrom_api.o(.text.XAES_SetInitVect) refers to mkrom_api.o(.data.xAES_SetInitVect) for xAES_SetInitVect
+    mkrom_api.o(.ARM.exidx.text.XAES_SetInitVect) refers to mkrom_api.o(.text.XAES_SetInitVect) for [Anonymous Symbol]
+    mkrom_api.o(.text.XAES_SetDMATransfer) refers to mkrom_api.o(.data.xAES_SetDMATransfer) for xAES_SetDMATransfer
+    mkrom_api.o(.ARM.exidx.text.XAES_SetDMATransfer) refers to mkrom_api.o(.text.XAES_SetDMATransfer) for [Anonymous Symbol]
+    mkrom_api.o(.text.XTDES_Open) refers to mkrom_api.o(.data.xTDES_Open) for xTDES_Open
+    mkrom_api.o(.ARM.exidx.text.XTDES_Open) refers to mkrom_api.o(.text.XTDES_Open) for [Anonymous Symbol]
+    mkrom_api.o(.text.XTDES_Start) refers to mkrom_api.o(.data.xTDES_Start) for xTDES_Start
+    mkrom_api.o(.ARM.exidx.text.XTDES_Start) refers to mkrom_api.o(.text.XTDES_Start) for [Anonymous Symbol]
+    mkrom_api.o(.text.XTDES_SetKey) refers to mkrom_api.o(.data.xTDES_SetKey) for xTDES_SetKey
+    mkrom_api.o(.ARM.exidx.text.XTDES_SetKey) refers to mkrom_api.o(.text.XTDES_SetKey) for [Anonymous Symbol]
+    mkrom_api.o(.text.XTDES_SetInitVect) refers to mkrom_api.o(.data.xTDES_SetInitVect) for xTDES_SetInitVect
+    mkrom_api.o(.ARM.exidx.text.XTDES_SetInitVect) refers to mkrom_api.o(.text.XTDES_SetInitVect) for [Anonymous Symbol]
+    mkrom_api.o(.text.XTDES_SetDMATransfer) refers to mkrom_api.o(.data.xTDES_SetDMATransfer) for xTDES_SetDMATransfer
+    mkrom_api.o(.ARM.exidx.text.XTDES_SetDMATransfer) refers to mkrom_api.o(.text.XTDES_SetDMATransfer) for [Anonymous Symbol]
+    mkrom_api.o(.text.XSHA_Open) refers to mkrom_api.o(.data.xSHA_Open) for xSHA_Open
+    mkrom_api.o(.ARM.exidx.text.XSHA_Open) refers to mkrom_api.o(.text.XSHA_Open) for [Anonymous Symbol]
+    mkrom_api.o(.text.XSHA_Start) refers to mkrom_api.o(.data.xSHA_Start) for xSHA_Start
+    mkrom_api.o(.ARM.exidx.text.XSHA_Start) refers to mkrom_api.o(.text.XSHA_Start) for [Anonymous Symbol]
+    mkrom_api.o(.text.XSHA_SetDMATransfer) refers to mkrom_api.o(.data.xSHA_SetDMATransfer) for xSHA_SetDMATransfer
+    mkrom_api.o(.ARM.exidx.text.XSHA_SetDMATransfer) refers to mkrom_api.o(.text.XSHA_SetDMATransfer) for [Anonymous Symbol]
+    mkrom_api.o(.text.XSHA_Read) refers to mkrom_api.o(.data.xSHA_Read) for xSHA_Read
+    mkrom_api.o(.ARM.exidx.text.XSHA_Read) refers to mkrom_api.o(.text.XSHA_Read) for [Anonymous Symbol]
+    mkrom_api.o(.text.XECC_IsPrivateKeyValid) refers to mkrom_api.o(.data.xECC_IsPrivateKeyValid) for xECC_IsPrivateKeyValid
+    mkrom_api.o(.ARM.exidx.text.XECC_IsPrivateKeyValid) refers to mkrom_api.o(.text.XECC_IsPrivateKeyValid) for [Anonymous Symbol]
+    mkrom_api.o(.text.XECC_GeneratePublicKey) refers to mkrom_api.o(.data.xECC_GeneratePublicKey) for xECC_GeneratePublicKey
+    mkrom_api.o(.ARM.exidx.text.XECC_GeneratePublicKey) refers to mkrom_api.o(.text.XECC_GeneratePublicKey) for [Anonymous Symbol]
+    mkrom_api.o(.text.XECC_GenerateSignature) refers to mkrom_api.o(.data.xECC_GenerateSignature) for xECC_GenerateSignature
+    mkrom_api.o(.ARM.exidx.text.XECC_GenerateSignature) refers to mkrom_api.o(.text.XECC_GenerateSignature) for [Anonymous Symbol]
+    mkrom_api.o(.text.XECC_VerifySignature) refers to mkrom_api.o(.data.xECC_VerifySignature) for xECC_VerifySignature
+    mkrom_api.o(.ARM.exidx.text.XECC_VerifySignature) refers to mkrom_api.o(.text.XECC_VerifySignature) for [Anonymous Symbol]
+    mkrom_api.o(.text.XECC_GenerateSecretZ) refers to mkrom_api.o(.data.xECC_GenerateSecretZ) for xECC_GenerateSecretZ
+    mkrom_api.o(.ARM.exidx.text.XECC_GenerateSecretZ) refers to mkrom_api.o(.text.XECC_GenerateSecretZ) for [Anonymous Symbol]
+    mkrom_api.o(.text.XECC_Reg2Hex) refers to mkrom_api.o(.data.xECC_Reg2Hex) for xECC_Reg2Hex
+    mkrom_api.o(.ARM.exidx.text.XECC_Reg2Hex) refers to mkrom_api.o(.text.XECC_Reg2Hex) for [Anonymous Symbol]
+    mkrom_api.o(.text.XECC_Hex2Reg) refers to mkrom_api.o(.data.xECC_Hex2Reg) for xECC_Hex2Reg
+    mkrom_api.o(.ARM.exidx.text.XECC_Hex2Reg) refers to mkrom_api.o(.text.XECC_Hex2Reg) for [Anonymous Symbol]
+    mkrom_api.o(.text.BL_RandomInit) refers to mkrom_api.o(.data.xBL_RandomInit) for xBL_RandomInit
+    mkrom_api.o(.ARM.exidx.text.BL_RandomInit) refers to mkrom_api.o(.text.BL_RandomInit) for [Anonymous Symbol]
+    mkrom_api.o(.text.BL_Random) refers to mkrom_api.o(.data.xBL_Random) for xBL_Random
+    mkrom_api.o(.ARM.exidx.text.BL_Random) refers to mkrom_api.o(.text.BL_Random) for [Anonymous Symbol]
+    mkrom_api.o(.text.BL_SecureISPInit) refers to mkrom_api.o(.data.xBL_SecureISPInit) for xBL_SecureISPInit
+    mkrom_api.o(.ARM.exidx.text.BL_SecureISPInit) refers to mkrom_api.o(.text.BL_SecureISPInit) for [Anonymous Symbol]
+    mkrom_api.o(.text.BL_ProcessUSBDInterrupt) refers to mkrom_api.o(.data.xBL_ProcessUSBDInterrupt) for xBL_ProcessUSBDInterrupt
+    mkrom_api.o(.text.BL_ProcessUSBDInterrupt) refers to mkrom_api.o(.text.Cmd_ParseReqPacket) for Cmd_ParseReqPacket
+    mkrom_api.o(.text.BL_ProcessUSBDInterrupt) refers to mkrom_api.o(.text.Cmd_GenRspPacket) for Cmd_GenRspPacket
+    mkrom_api.o(.ARM.exidx.text.BL_ProcessUSBDInterrupt) refers to mkrom_api.o(.text.BL_ProcessUSBDInterrupt) for [Anonymous Symbol]
+    mkrom_api.o(.text.Cmd_ParseReqPacket) refers to mkrom_api.o(.data.xCmd_ParseReqPacket) for xCmd_ParseReqPacket
+    mkrom_api.o(.ARM.exidx.text.Cmd_ParseReqPacket) refers to mkrom_api.o(.text.Cmd_ParseReqPacket) for [Anonymous Symbol]
+    mkrom_api.o(.text.Cmd_GenRspPacket) refers to mkrom_api.o(.data.xCmd_GenRspPacket) for xCmd_GenRspPacket
+    mkrom_api.o(.ARM.exidx.text.Cmd_GenRspPacket) refers to mkrom_api.o(.text.Cmd_GenRspPacket) for [Anonymous Symbol]
+    mkrom_api.o(.text.BL_ProcessUART1Interrupt) refers to mkrom_api.o(.data.xBL_ProcessUART1Interrupt) for xBL_ProcessUART1Interrupt
+    mkrom_api.o(.text.BL_ProcessUART1Interrupt) refers to mkrom_api.o(.text.Cmd_ParseReqPacket) for Cmd_ParseReqPacket
+    mkrom_api.o(.text.BL_ProcessUART1Interrupt) refers to mkrom_api.o(.text.Cmd_GenRspPacket) for Cmd_GenRspPacket
+    mkrom_api.o(.ARM.exidx.text.BL_ProcessUART1Interrupt) refers to mkrom_api.o(.text.BL_ProcessUART1Interrupt) for [Anonymous Symbol]
+    mkrom_api.o(.text.BL_GetVendorData) refers to mkrom_api.o(.text.Cmd_ParseReqPacket) for Cmd_ParseReqPacket
+    mkrom_api.o(.text.BL_GetVendorData) refers to memcpya.o(.text) for __aeabi_memcpy4
+    mkrom_api.o(.ARM.exidx.text.BL_GetVendorData) refers to mkrom_api.o(.text.BL_GetVendorData) for [Anonymous Symbol]
+    mkrom_api.o(.text.ParseCONNECT) refers to mkrom_api.o(.data.xParseCONNECT) for xParseCONNECT
+    mkrom_api.o(.ARM.exidx.text.ParseCONNECT) refers to mkrom_api.o(.text.ParseCONNECT) for [Anonymous Symbol]
+    mkrom_api.o(.text.ParseECDH) refers to mkrom_api.o(.data.xParseECDH) for xParseECDH
+    mkrom_api.o(.ARM.exidx.text.ParseECDH) refers to mkrom_api.o(.text.ParseECDH) for [Anonymous Symbol]
+    mkrom_api.o(.text.ParseCommands) refers to mkrom_api.o(.text.Cmd_ParseReqPacket) for Cmd_ParseReqPacket
+    mkrom_api.o(.text.ParseCommands) refers to mkrom_api.o(.text.Cmd_GenRspPacket) for Cmd_GenRspPacket
+    mkrom_api.o(.text.ParseCommands) refers to mkrom_api.o(.data.xParseCommands) for xParseCommands
+    mkrom_api.o(.ARM.exidx.text.ParseCommands) refers to mkrom_api.o(.text.ParseCommands) for [Anonymous Symbol]
+    mkrom_api.o(.text.BL_USBDOpen) refers to mkrom_api.o(.data.xBL_USBDOpen) for xBL_USBDOpen
+    mkrom_api.o(.ARM.exidx.text.BL_USBDOpen) refers to mkrom_api.o(.text.BL_USBDOpen) for [Anonymous Symbol]
+    mkrom_api.o(.text.BL_USBDInstallEPHandler) refers to mkrom_api.o(.data.xBL_USBDInstallEPHandler) for xBL_USBDInstallEPHandler
+    mkrom_api.o(.ARM.exidx.text.BL_USBDInstallEPHandler) refers to mkrom_api.o(.text.BL_USBDInstallEPHandler) for [Anonymous Symbol]
+    mkrom_api.o(.text.BL_USBDStart) refers to mkrom_api.o(.data.xBL_USBDStart) for xBL_USBDStart
+    mkrom_api.o(.ARM.exidx.text.BL_USBDStart) refers to mkrom_api.o(.text.BL_USBDStart) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    fgets.o(i.fgets) refers to retarget.o(.text.fgetc) for fgetc
+    strcasecmp.o(.text) refers to tolower.o(.text) for tolower
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to retarget.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to retarget.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers to retarget.o(.bss.__stdout) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to retarget.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to retarget.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to retarget.o(.bss.__stdout) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sscanf.o(.text) refers (Special) to _scanf_int.o(.text) for _scanf_int
+    sscanf.o(.text) refers (Special) to _scanf_longlong.o(.text) for _scanf_longlong
+    sscanf.o(.text) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    sscanf.o(.text) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    sscanf.o(.text) refers to scanf_char.o(.text) for __vfscanf_char
+    sscanf.o(.text) refers to _sgetc.o(.text) for _sgetc
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_m2351.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_m2351.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text.main) for main
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    _scanf_longlong.o(.text) refers to llmul.o(.text) for __aeabi_lmul
+    _scanf_longlong.o(.text) refers to _chval.o(.text) for _chval
+    _scanf_int.o(.text) refers to _chval.o(.text) for _chval
+    scanf_fp.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    scanf_fp.o(.text) refers to llmul.o(.text) for __aeabi_lmul
+    scanf_fp.o(.text) refers to dfltul.o(.text) for __aeabi_ul2d
+    scanf_fp.o(.text) refers to dmul.o(.text) for __aeabi_dmul
+    scanf_fp.o(.text) refers to ddiv.o(.text) for __aeabi_ddiv
+    scanf_fp.o(.text) refers to scanf_fp.o(i._is_digit) for _is_digit
+    scanf_fp.o(.text) refers to d2f.o(.text) for __aeabi_d2f
+    scanf_char.o(.text) refers to _scanf.o(.text) for __vfscanf
+    scanf_char.o(.text) refers to isspace_c.o(.text) for isspace
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfixul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    llmul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    isspace_c.o(.text) refers to ctype_c.o(.text) for __ctype_lookup
+    _scanf.o(.text) refers (Weak) to scanf_fp.o(.text) for _scanf_real
+    _scanf.o(.text) refers (Weak) to _scanf_longlong.o(.text) for _scanf_longlong
+    _scanf.o(.text) refers (Weak) to _scanf_int.o(.text) for _scanf_int
+    _scanf.o(.text) refers (Weak) to _scanf_str.o(.text) for _scanf_string
+    depilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers to depilogue.o(i.__ARM_clz) for __ARM_clz
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfltul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfltul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    d2f.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers to fepilogue.o(.text) for _float_round
+    ctype_c.o(.text) refers to ctype_c.o(.constdata) for .constdata
+    fepilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    scanf_fp.o(i._is_digit) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(i.__ARM_clz) refers (Special) to iusefp.o(.text) for __I$use$fp
+    anon$$obj.o(Veneer$$CMSE) refers to main.o(.text.S_decrypt_cipher_value) for __acle_se_S_decrypt_cipher_value
+    anon$$obj.o(Veneer$$CMSE) refers to main.o(.text.S_encrypt_secure_value) for __acle_se_S_encrypt_secure_value
+    anon$$obj.o(Veneer$$CMSE) refers to main.o(.text.S_get_cipher_value) for __acle_se_S_get_cipher_value
+    anon$$obj.o(Veneer$$CMSE) refers to main.o(.text.S_get_secure_value) for __acle_se_S_get_secure_value
+    anon$$obj.o(Veneer$$CMSE) refers to clk.o(.text.CLK_GetCPUFreq) for __acle_se_CLK_GetCPUFreq
+    anon$$obj.o(Veneer$$CMSE) refers to clk.o(.text.CLK_GetHCLKFreq) for __acle_se_CLK_GetHCLKFreq
+    anon$$obj.o(Veneer$$CMSE) refers to clk.o(.text.CLK_GetHXTFreq) for __acle_se_CLK_GetHXTFreq
+    anon$$obj.o(Veneer$$CMSE) refers to clk.o(.text.CLK_GetLXTFreq) for __acle_se_CLK_GetLXTFreq
+    anon$$obj.o(Veneer$$CMSE) refers to clk.o(.text.CLK_GetModuleClockDivider) for __acle_se_CLK_GetModuleClockDivider
+    anon$$obj.o(Veneer$$CMSE) refers to clk.o(.text.CLK_GetModuleClockSource) for __acle_se_CLK_GetModuleClockSource
+    anon$$obj.o(Veneer$$CMSE) refers to clk.o(.text.CLK_GetPCLK0Freq) for __acle_se_CLK_GetPCLK0Freq
+    anon$$obj.o(Veneer$$CMSE) refers to clk.o(.text.CLK_GetPCLK1Freq) for __acle_se_CLK_GetPCLK1Freq
+    anon$$obj.o(Veneer$$CMSE) refers to clk.o(.text.CLK_GetPLLClockFreq) for __acle_se_CLK_GetPLLClockFreq
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.S_get_secure_value), (8 bytes).
+    Removing main.o(.ARM.exidx.text.S_get_cipher_value), (8 bytes).
+    Removing main.o(.ARM.exidx.text.hex_to_byte), (8 bytes).
+    Removing main.o(.ARM.exidx.text.S_encrypt_secure_value), (8 bytes).
+    Removing main.o(.ARM.exidx.text.encrypt), (8 bytes).
+    Removing main.o(.ARM.exidx.text.S_decrypt_cipher_value), (8 bytes).
+    Removing main.o(.ARM.exidx.text.decrypt), (8 bytes).
+    Removing main.o(.ARM.exidx.text.CRPT_IRQHandler), (8 bytes).
+    Removing main.o(.ARM.exidx.text.print_hex), (8 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.exidx.text.SYS_UnlockReg), (8 bytes).
+    Removing main.o(.ARM.exidx.text.init_system), (8 bytes).
+    Removing main.o(.ARM.exidx.text.init_debug_port), (8 bytes).
+    Removing main.o(.ARM.exidx.text.init_crypto), (8 bytes).
+    Removing main.o(.ARM.exidx.text.SYS_LockReg), (8 bytes).
+    Removing main.o(.ARM.exidx.text.init_non_secure), (8 bytes).
+    Removing main.o(.ARM.exidx.text.__NVIC_EnableIRQ), (8 bytes).
+    Removing main.o(.ARM.exidx.text.itsc_startup), (8 bytes).
+    Removing system_m2351.o(.text), (0 bytes).
+    Removing system_m2351.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_m2351.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_m2351.o(.ARM.exidx.text.TZ_SAU_Setup), (8 bytes).
+    Removing system_m2351.o(.ARM.exidx.text.SCU_Setup), (8 bytes).
+    Removing system_m2351.o(.ARM.exidx.text.FMC_NSBA_Setup), (8 bytes).
+    Removing system_m2351.o(.ARM.exidx.text.SYS_UnlockReg), (8 bytes).
+    Removing system_m2351.o(.rodata.gau32ClkSrcTbl), (32 bytes).
+    Removing startup_m2351.o(HEAP), (0 bytes).
+    Removing retarget.o(.text), (0 bytes).
+    Removing retarget.o(.ARM.exidx.text.ProcessHardFault), (8 bytes).
+    Removing retarget.o(.ARM.exidx.text.SH_Return), (8 bytes).
+    Removing retarget.o(.ARM.exidx.text.SendChar_ToUART), (8 bytes).
+    Removing retarget.o(.ARM.exidx.text.SendChar), (8 bytes).
+    Removing retarget.o(.ARM.exidx.text.GetChar), (8 bytes).
+    Removing retarget.o(.text.kbhit), (20 bytes).
+    Removing retarget.o(.ARM.exidx.text.kbhit), (8 bytes).
+    Removing retarget.o(.text.IsDebugFifoEmpty), (20 bytes).
+    Removing retarget.o(.ARM.exidx.text.IsDebugFifoEmpty), (8 bytes).
+    Removing retarget.o(.text._ttywrch), (20 bytes).
+    Removing retarget.o(.ARM.exidx.text._ttywrch), (8 bytes).
+    Removing retarget.o(.ARM.exidx.text.fputc), (8 bytes).
+    Removing retarget.o(.ARM.exidx.text.fgetc), (8 bytes).
+    Removing retarget.o(.text.ferror), (16 bytes).
+    Removing retarget.o(.ARM.exidx.text.ferror), (8 bytes).
+    Removing clk.o(.text), (0 bytes).
+    Removing clk.o(.text.CLK_DisableCKO), (16 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_DisableCKO), (8 bytes).
+    Removing clk.o(.text.CLK_EnableCKO), (80 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnableCKO), (8 bytes).
+    Removing clk.o(.text.CLK_PowerDown), (32 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_PowerDown), (8 bytes).
+    Removing clk.o(.text.CLK_Idle), (32 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_Idle), (8 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetHXTFreq), (8 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetLXTFreq), (8 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetHCLKFreq), (8 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetPCLK0Freq), (8 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetPCLK1Freq), (8 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetCPUFreq), (8 bytes).
+    Removing clk.o(.text.CLK_SetCoreClock), (284 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_SetCoreClock), (8 bytes).
+    Removing clk.o(.text.CLK_WaitClockReady), (68 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_WaitClockReady), (8 bytes).
+    Removing clk.o(.text.CLK_EnablePLL), (548 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnablePLL), (8 bytes).
+    Removing clk.o(.text.CLK_SetHCLK), (168 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_SetHCLK), (8 bytes).
+    Removing clk.o(.text.CLK_SetModuleClock), (208 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_SetModuleClock), (8 bytes).
+    Removing clk.o(.text.CLK_SetSysTickClockSrc), (32 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_SetSysTickClockSrc), (8 bytes).
+    Removing clk.o(.text.CLK_EnableXtalRC), (28 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnableXtalRC), (8 bytes).
+    Removing clk.o(.text.CLK_DisableXtalRC), (28 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_DisableXtalRC), (8 bytes).
+    Removing clk.o(.text.CLK_EnableModuleClock), (64 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnableModuleClock), (8 bytes).
+    Removing clk.o(.text.CLK_DisableModuleClock), (64 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_DisableModuleClock), (8 bytes).
+    Removing clk.o(.text.CLK_DisablePLL), (20 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_DisablePLL), (8 bytes).
+    Removing clk.o(.text.CLK_EnableSysTick), (100 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnableSysTick), (8 bytes).
+    Removing clk.o(.text.CLK_DisableSysTick), (12 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_DisableSysTick), (8 bytes).
+    Removing clk.o(.text.CLK_SetPowerDownMode), (32 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_SetPowerDownMode), (8 bytes).
+    Removing clk.o(.text.CLK_EnableDPDWKPin), (32 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnableDPDWKPin), (8 bytes).
+    Removing clk.o(.text.CLK_GetPMUWKSrc), (12 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetPMUWKSrc), (8 bytes).
+    Removing clk.o(.text.CLK_EnableSPDWKPin), (96 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_EnableSPDWKPin), (8 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetPLLClockFreq), (8 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetModuleClockSource), (8 bytes).
+    Removing clk.o(.ARM.exidx.text.CLK_GetModuleClockDivider), (8 bytes).
+    Removing clk.o(.rodata.cst4), (8 bytes).
+    Removing gpio.o(.text), (0 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_SetMode), (8 bytes).
+    Removing gpio.o(.text.GPIO_EnableInt), (84 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_EnableInt), (8 bytes).
+    Removing gpio.o(.text.GPIO_DisableInt), (52 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_DisableInt), (8 bytes).
+    Removing gpio.o(.text.GPIO_SetSlewCtl), (90 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_SetSlewCtl), (8 bytes).
+    Removing gpio.o(.text.GPIO_SetPullCtl), (90 bytes).
+    Removing gpio.o(.ARM.exidx.text.GPIO_SetPullCtl), (8 bytes).
+    Removing crypto.o(.text), (0 bytes).
+    Removing crypto.o(.text.PRNG_Open), (62 bytes).
+    Removing crypto.o(.ARM.exidx.text.PRNG_Open), (8 bytes).
+    Removing crypto.o(.text.PRNG_Start), (22 bytes).
+    Removing crypto.o(.ARM.exidx.text.PRNG_Start), (8 bytes).
+    Removing crypto.o(.text.PRNG_Read), (86 bytes).
+    Removing crypto.o(.ARM.exidx.text.PRNG_Read), (8 bytes).
+    Removing crypto.o(.ARM.exidx.text.AES_Open), (8 bytes).
+    Removing crypto.o(.ARM.exidx.text.AES_Start), (8 bytes).
+    Removing crypto.o(.ARM.exidx.text.AES_SetKey), (8 bytes).
+    Removing crypto.o(.ARM.exidx.text.AES_SetInitVect), (8 bytes).
+    Removing crypto.o(.ARM.exidx.text.AES_SetDMATransfer), (8 bytes).
+    Removing crypto.o(.text.TDES_Open), (128 bytes).
+    Removing crypto.o(.ARM.exidx.text.TDES_Open), (8 bytes).
+    Removing crypto.o(.text.TDES_Start), (64 bytes).
+    Removing crypto.o(.ARM.exidx.text.TDES_Start), (8 bytes).
+    Removing crypto.o(.text.TDES_SetKey), (104 bytes).
+    Removing crypto.o(.ARM.exidx.text.TDES_SetKey), (8 bytes).
+    Removing crypto.o(.text.TDES_SetInitVect), (76 bytes).
+    Removing crypto.o(.ARM.exidx.text.TDES_SetInitVect), (8 bytes).
+    Removing crypto.o(.text.TDES_SetDMATransfer), (104 bytes).
+    Removing crypto.o(.ARM.exidx.text.TDES_SetDMATransfer), (8 bytes).
+    Removing crypto.o(.text.SHA_Open), (70 bytes).
+    Removing crypto.o(.ARM.exidx.text.SHA_Open), (8 bytes).
+    Removing crypto.o(.text.SHA_Start), (50 bytes).
+    Removing crypto.o(.ARM.exidx.text.SHA_Start), (8 bytes).
+    Removing crypto.o(.text.SHA_SetDMATransfer), (46 bytes).
+    Removing crypto.o(.ARM.exidx.text.SHA_SetDMATransfer), (8 bytes).
+    Removing crypto.o(.text.SHA_Read), (158 bytes).
+    Removing crypto.o(.ARM.exidx.text.SHA_Read), (8 bytes).
+    Removing crypto.o(.text.ECC_DriverISR), (76 bytes).
+    Removing crypto.o(.ARM.exidx.text.ECC_DriverISR), (8 bytes).
+    Removing crypto.o(.text.ECC_IsPrivateKeyValid), (268 bytes).
+    Removing crypto.o(.ARM.exidx.text.ECC_IsPrivateKeyValid), (8 bytes).
+    Removing crypto.o(.text.get_curve), (124 bytes).
+    Removing crypto.o(.ARM.exidx.text.get_curve), (8 bytes).
+    Removing crypto.o(.text.get_nibble_value), (138 bytes).
+    Removing crypto.o(.ARM.exidx.text.get_nibble_value), (8 bytes).
+    Removing crypto.o(.text.ECC_GeneratePublicKey), (300 bytes).
+    Removing crypto.o(.ARM.exidx.text.ECC_GeneratePublicKey), (8 bytes).
+    Removing crypto.o(.text.ecc_init_curve), (564 bytes).
+    Removing crypto.o(.ARM.exidx.text.ecc_init_curve), (8 bytes).
+    Removing crypto.o(.text.Hex2Reg), (158 bytes).
+    Removing crypto.o(.ARM.exidx.text.Hex2Reg), (8 bytes).
+    Removing crypto.o(.text.Reg2Hex), (150 bytes).
+    Removing crypto.o(.ARM.exidx.text.Reg2Hex), (8 bytes).
+    Removing crypto.o(.text.ECC_GenerateSecretZ), (452 bytes).
+    Removing crypto.o(.ARM.exidx.text.ECC_GenerateSecretZ), (8 bytes).
+    Removing crypto.o(.text.Hex2RegEx), (208 bytes).
+    Removing crypto.o(.ARM.exidx.text.Hex2RegEx), (8 bytes).
+    Removing crypto.o(.text.ECC_GenerateSignature), (1000 bytes).
+    Removing crypto.o(.ARM.exidx.text.ECC_GenerateSignature), (8 bytes).
+    Removing crypto.o(.text.run_ecc_codec), (200 bytes).
+    Removing crypto.o(.ARM.exidx.text.run_ecc_codec), (8 bytes).
+    Removing crypto.o(.text.ECC_VerifySignature), (1452 bytes).
+    Removing crypto.o(.ARM.exidx.text.ECC_VerifySignature), (8 bytes).
+    Removing crypto.o(.text.CurveCpy), (20760 bytes).
+    Removing crypto.o(.ARM.exidx.text.CurveCpy), (8 bytes).
+    Removing crypto.o(.text.dump_ecc_reg), (26 bytes).
+    Removing crypto.o(.ARM.exidx.text.dump_ecc_reg), (8 bytes).
+    Removing crypto.o(.text.ch2hex), (76 bytes).
+    Removing crypto.o(.ARM.exidx.text.ch2hex), (8 bytes).
+    Removing crypto.o(.text.get_Nth_nibble_char), (40 bytes).
+    Removing crypto.o(.ARM.exidx.text.get_Nth_nibble_char), (8 bytes).
+    Removing crypto.o(.bss.g_TDES_CTL), (16 bytes).
+    Removing crypto.o(.rodata._Curve), (14460 bytes).
+    Removing crypto.o(.bss.g_ECC_done), (4 bytes).
+    Removing crypto.o(.bss.g_ECCERR_done), (4 bytes).
+    Removing crypto.o(.bss.pCurve), (4 bytes).
+    Removing crypto.o(.bss.temp_hex_str), (160 bytes).
+    Removing crypto.o(.rodata.str1.1), (87 bytes).
+    Removing crypto.o(.data.hex_char_tbl), (17 bytes).
+    Removing crypto.o(.bss.Curve_Copy), (964 bytes).
+    Removing mkrom_api.o(.text), (0 bytes).
+    Removing mkrom_api.o(.text.MKROM_Version), (8 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.MKROM_Version), (8 bytes).
+    Removing mkrom_api.o(.text.XAES_Open), (102 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XAES_Open), (8 bytes).
+    Removing mkrom_api.o(.text.XAES_Start), (54 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XAES_Start), (8 bytes).
+    Removing mkrom_api.o(.text.XAES_SetKey), (66 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XAES_SetKey), (8 bytes).
+    Removing mkrom_api.o(.text.XAES_SetInitVect), (54 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XAES_SetInitVect), (8 bytes).
+    Removing mkrom_api.o(.text.XAES_SetDMATransfer), (88 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XAES_SetDMATransfer), (8 bytes).
+    Removing mkrom_api.o(.text.XTDES_Open), (114 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XTDES_Open), (8 bytes).
+    Removing mkrom_api.o(.text.XTDES_Start), (54 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XTDES_Start), (8 bytes).
+    Removing mkrom_api.o(.text.XTDES_SetKey), (54 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XTDES_SetKey), (8 bytes).
+    Removing mkrom_api.o(.text.XTDES_SetInitVect), (66 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XTDES_SetInitVect), (8 bytes).
+    Removing mkrom_api.o(.text.XTDES_SetDMATransfer), (88 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XTDES_SetDMATransfer), (8 bytes).
+    Removing mkrom_api.o(.text.XSHA_Open), (66 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XSHA_Open), (8 bytes).
+    Removing mkrom_api.o(.text.XSHA_Start), (44 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XSHA_Start), (8 bytes).
+    Removing mkrom_api.o(.text.XSHA_SetDMATransfer), (54 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XSHA_SetDMATransfer), (8 bytes).
+    Removing mkrom_api.o(.text.XSHA_Read), (44 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XSHA_Read), (8 bytes).
+    Removing mkrom_api.o(.text.XECC_IsPrivateKeyValid), (54 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XECC_IsPrivateKeyValid), (8 bytes).
+    Removing mkrom_api.o(.text.XECC_GeneratePublicKey), (88 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XECC_GeneratePublicKey), (8 bytes).
+    Removing mkrom_api.o(.text.XECC_GenerateSignature), (114 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XECC_GenerateSignature), (8 bytes).
+    Removing mkrom_api.o(.text.XECC_VerifySignature), (114 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XECC_VerifySignature), (8 bytes).
+    Removing mkrom_api.o(.text.XECC_GenerateSecretZ), (102 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XECC_GenerateSecretZ), (8 bytes).
+    Removing mkrom_api.o(.text.XECC_Reg2Hex), (54 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XECC_Reg2Hex), (8 bytes).
+    Removing mkrom_api.o(.text.XECC_Hex2Reg), (44 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.XECC_Hex2Reg), (8 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.BL_RandomInit), (8 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.BL_Random), (8 bytes).
+    Removing mkrom_api.o(.text.BL_SecureISPInit), (54 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.BL_SecureISPInit), (8 bytes).
+    Removing mkrom_api.o(.text.BL_ProcessUSBDInterrupt), (176 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.BL_ProcessUSBDInterrupt), (8 bytes).
+    Removing mkrom_api.o(.text.Cmd_ParseReqPacket), (44 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.Cmd_ParseReqPacket), (8 bytes).
+    Removing mkrom_api.o(.text.Cmd_GenRspPacket), (44 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.Cmd_GenRspPacket), (8 bytes).
+    Removing mkrom_api.o(.text.BL_ProcessUART1Interrupt), (156 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.BL_ProcessUART1Interrupt), (8 bytes).
+    Removing mkrom_api.o(.text.BL_GetVendorData), (152 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.BL_GetVendorData), (8 bytes).
+    Removing mkrom_api.o(.text.ParseCONNECT), (34 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.ParseCONNECT), (8 bytes).
+    Removing mkrom_api.o(.text.ParseECDH), (34 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.ParseECDH), (8 bytes).
+    Removing mkrom_api.o(.text.ParseCommands), (128 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.ParseCommands), (8 bytes).
+    Removing mkrom_api.o(.text.BL_USBDOpen), (66 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.BL_USBDOpen), (8 bytes).
+    Removing mkrom_api.o(.text.BL_USBDInstallEPHandler), (54 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.BL_USBDInstallEPHandler), (8 bytes).
+    Removing mkrom_api.o(.text.BL_USBDStart), (16 bytes).
+    Removing mkrom_api.o(.ARM.exidx.text.BL_USBDStart), (8 bytes).
+    Removing mkrom_api.o(.data.g_xcrpt), (1004 bytes).
+    Removing mkrom_api.o(.data.xAES_Open), (4 bytes).
+    Removing mkrom_api.o(.data.xAES_Start), (4 bytes).
+    Removing mkrom_api.o(.data.xAES_SetKey), (4 bytes).
+    Removing mkrom_api.o(.data.xAES_SetInitVect), (4 bytes).
+    Removing mkrom_api.o(.data.xAES_SetDMATransfer), (4 bytes).
+    Removing mkrom_api.o(.data.xTDES_Open), (4 bytes).
+    Removing mkrom_api.o(.data.xTDES_Start), (4 bytes).
+    Removing mkrom_api.o(.data.xTDES_SetKey), (4 bytes).
+    Removing mkrom_api.o(.data.xTDES_SetInitVect), (4 bytes).
+    Removing mkrom_api.o(.data.xTDES_SetDMATransfer), (4 bytes).
+    Removing mkrom_api.o(.data.xSHA_Open), (4 bytes).
+    Removing mkrom_api.o(.data.xSHA_Start), (4 bytes).
+    Removing mkrom_api.o(.data.xSHA_SetDMATransfer), (4 bytes).
+    Removing mkrom_api.o(.data.xSHA_Read), (4 bytes).
+    Removing mkrom_api.o(.data.xECC_IsPrivateKeyValid), (4 bytes).
+    Removing mkrom_api.o(.data.xECC_GeneratePublicKey), (4 bytes).
+    Removing mkrom_api.o(.data.xECC_GenerateSignature), (4 bytes).
+    Removing mkrom_api.o(.data.xECC_VerifySignature), (4 bytes).
+    Removing mkrom_api.o(.data.xECC_GenerateSecretZ), (4 bytes).
+    Removing mkrom_api.o(.data.xECC_Reg2Hex), (4 bytes).
+    Removing mkrom_api.o(.data.xECC_Hex2Reg), (4 bytes).
+    Removing mkrom_api.o(.data.xBL_SecureISPInit), (4 bytes).
+    Removing mkrom_api.o(.data.xBL_ProcessUSBDInterrupt), (4 bytes).
+    Removing mkrom_api.o(.data.xBL_ProcessUART1Interrupt), (4 bytes).
+    Removing mkrom_api.o(.data.xCmd_GenRspPacket), (4 bytes).
+    Removing mkrom_api.o(.data.xCmd_ParseReqPacket), (4 bytes).
+    Removing mkrom_api.o(.data.xParseCONNECT), (4 bytes).
+    Removing mkrom_api.o(.data.xParseECDH), (4 bytes).
+    Removing mkrom_api.o(.data.xParseCommands), (4 bytes).
+    Removing mkrom_api.o(.data.xBL_USBDOpen), (4 bytes).
+    Removing mkrom_api.o(.data.xBL_USBDInstallEPHandler), (4 bytes).
+    Removing mkrom_api.o(.data.xBL_USBDStart), (4 bytes).
+
+284 unused section(s) (total 49802 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      472  startup_m2351.o(RESET)
+    ../clib/microlib/ctype/ctype.c           0x00000000   Number         0  isspace_c.o ABSOLUTE
+    ../clib/microlib/ctype/ctype.c           0x00000000   Number         0  ctype_c.o ABSOLUTE
+    ../clib/microlib/ctype/tolower.c         0x00000000   Number         0  tolower.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llmul.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/stdio/fgets.c           0x00000000   Number         0  fgets.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/strcasecmp.c     0x00000000   Number         0  strcasecmp.o ABSOLUTE
+    ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  scanf_fp.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _scanf.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _chval.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _scanf_int.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _scanf_longlong.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  sscanf.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _sgetc.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  scanf_char.o ABSOLUTE
+    ../clib/scanf.c                          0x00000000   Number         0  _scanf_str.o ABSOLUTE
+    ../fplib/microlib/d2f.c                  0x00000000   Number         0  d2f.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ../mkrom_api.c                           0x00000000   Number         0  mkrom_api.o ABSOLUTE
+    ..\..\..\..\..\Library\Device\Nuvoton\M2351\Source\ARM\startup_M2351.s 0x00000000   Number         0  startup_m2351.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    clk.c                                    0x00000000   Number         0  clk.o ABSOLUTE
+    crypto.c                                 0x00000000   Number         0  crypto.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    gpio.c                                   0x00000000   Number         0  gpio.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    retarget.c                               0x00000000   Number         0  retarget.o ABSOLUTE
+    system_M2351.c                           0x00000000   Number         0  system_m2351.o ABSOLUTE
+    .ARM.Collect$$$$00000000                 0x000001d8   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000001d8   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000001dc   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000001e0   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000001e0   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000001e0   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    .ARM.Collect$$$$0000000D                 0x000001e8   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000001e8   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000001e8   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    __lit__00000000                          0x000001e8   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000001ec   Section       68  startup_m2351.o(.text)
+    .text                                    0x00000230   Section        0  strlen.o(.text)
+    .text                                    0x00000240   Section        0  sscanf.o(.text)
+    .text                                    0x0000027c   Section        0  uidiv.o(.text)
+    .text                                    0x000002a8   Section        0  uldiv.o(.text)
+    .text                                    0x00000308   Section        0  _scanf_longlong.o(.text)
+    .text                                    0x00000452   Section        0  _scanf_int.o(.text)
+    .text                                    0x0000059c   Section        0  _scanf_str.o(.text)
+    .text                                    0x00000684   Section        0  scanf_fp.o(.text)
+    _fp_value                                0x00000685   Thumb Code   286  scanf_fp.o(.text)
+    .text                                    0x000009f8   Section        0  scanf_char.o(.text)
+    _scanf_char_input                        0x000009f9   Thumb Code    12  scanf_char.o(.text)
+    .text                                    0x00000a24   Section        0  _sgetc.o(.text)
+    .text                                    0x00000a68   Section        0  dadd.o(.text)
+    .text                                    0x00000a68   Section        0  iusefp.o(.text)
+    .text                                    0x00000bcc   Section        0  dmul.o(.text)
+    .text                                    0x00000c9c   Section        0  ddiv.o(.text)
+    .text                                    0x00000d8c   Section        0  dfixul.o(.text)
+    .text                                    0x00000dcc   Section       40  cdrcmple.o(.text)
+    .text                                    0x00000df4   Section       36  init.o(.text)
+    .text                                    0x00000e18   Section        0  llmul.o(.text)
+    .text                                    0x00000e92   Section        0  llshl.o(.text)
+    .text                                    0x00000eb2   Section        0  llushr.o(.text)
+    .text                                    0x00000ed4   Section        0  llsshr.o(.text)
+    .text                                    0x00000efa   Section        0  isspace_c.o(.text)
+    .text                                    0x00000f08   Section        0  _chval.o(.text)
+    .text                                    0x00000f28   Section        0  _scanf.o(.text)
+    .text                                    0x00001260   Section        0  depilogue.o(.text)
+    .text                                    0x00001320   Section        0  dfltul.o(.text)
+    .text                                    0x0000133c   Section        0  d2f.o(.text)
+    .text                                    0x00001374   Section        0  ctype_c.o(.text)
+    .text                                    0x00001398   Section        0  fepilogue.o(.text)
+    [Anonymous Symbol]                       0x0000141c   Section        0  crypto.o(.text.AES_Open)
+    [Anonymous Symbol]                       0x00001478   Section        0  crypto.o(.text.AES_SetDMATransfer)
+    [Anonymous Symbol]                       0x000014e6   Section        0  crypto.o(.text.AES_SetInitVect)
+    [Anonymous Symbol]                       0x0000153c   Section        0  crypto.o(.text.AES_SetKey)
+    [Anonymous Symbol]                       0x000015a4   Section        0  crypto.o(.text.AES_Start)
+    __arm_cp.4_0                             0x000015e0   Number         4  crypto.o(.text.AES_Start)
+    [Anonymous Symbol]                       0x000015e4   Section        0  mkrom_api.o(.text.BL_Random)
+    [Anonymous Symbol]                       0x0000161a   Section        0  mkrom_api.o(.text.BL_RandomInit)
+    [Anonymous Symbol]                       0x00001648   Section        0  clk.o(.text.CLK_GetCPUFreq)
+    __arm_cp.9_0                             0x000017ac   Number         4  clk.o(.text.CLK_GetCPUFreq)
+    __arm_cp.9_1                             0x000017b0   Number         4  clk.o(.text.CLK_GetCPUFreq)
+    __arm_cp.9_2                             0x000017b4   Number         4  clk.o(.text.CLK_GetCPUFreq)
+    __arm_cp.9_3                             0x000017b8   Number         4  clk.o(.text.CLK_GetCPUFreq)
+    __arm_cp.9_5                             0x000017bc   Number         4  clk.o(.text.CLK_GetCPUFreq)
+    __arm_cp.9_6                             0x000017c0   Number         4  clk.o(.text.CLK_GetCPUFreq)
+    __arm_cp.9_8                             0x000017c4   Number         4  clk.o(.text.CLK_GetCPUFreq)
+    __arm_cp.9_11                            0x000017c8   Number         4  clk.o(.text.CLK_GetCPUFreq)
+    __arm_cp.9_12                            0x000017cc   Number         4  clk.o(.text.CLK_GetCPUFreq)
+    __arm_cp.9_13                            0x000017d0   Number         4  clk.o(.text.CLK_GetCPUFreq)
+    [Anonymous Symbol]                       0x000017d4   Section        0  clk.o(.text.CLK_GetHCLKFreq)
+    [Anonymous Symbol]                       0x000017f4   Section        0  clk.o(.text.CLK_GetHXTFreq)
+    __arm_cp.4_1                             0x0000182c   Number         4  clk.o(.text.CLK_GetHXTFreq)
+    [Anonymous Symbol]                       0x00001830   Section        0  clk.o(.text.CLK_GetLXTFreq)
+    __arm_cp.5_0                             0x00001868   Number         4  clk.o(.text.CLK_GetLXTFreq)
+    [Anonymous Symbol]                       0x0000186c   Section        0  clk.o(.text.CLK_GetModuleClockDivider)
+    __arm_cp.29_0                            0x000018d8   Number         4  clk.o(.text.CLK_GetModuleClockDivider)
+    __arm_cp.29_1                            0x000018dc   Number         4  clk.o(.text.CLK_GetModuleClockDivider)
+    [Anonymous Symbol]                       0x000018e0   Section        0  clk.o(.text.CLK_GetModuleClockSource)
+    __arm_cp.28_0                            0x000019b8   Number         4  clk.o(.text.CLK_GetModuleClockSource)
+    __arm_cp.28_1                            0x000019bc   Number         4  clk.o(.text.CLK_GetModuleClockSource)
+    __arm_cp.28_2                            0x000019c0   Number         4  clk.o(.text.CLK_GetModuleClockSource)
+    __arm_cp.28_3                            0x000019c4   Number         4  clk.o(.text.CLK_GetModuleClockSource)
+    __arm_cp.28_4                            0x000019c8   Number         4  clk.o(.text.CLK_GetModuleClockSource)
+    __arm_cp.28_5                            0x000019cc   Number         4  clk.o(.text.CLK_GetModuleClockSource)
+    __arm_cp.28_6                            0x000019d0   Number         4  clk.o(.text.CLK_GetModuleClockSource)
+    [Anonymous Symbol]                       0x000019d4   Section        0  clk.o(.text.CLK_GetPCLK0Freq)
+    [Anonymous Symbol]                       0x000019fc   Section        0  clk.o(.text.CLK_GetPCLK1Freq)
+    __arm_cp.8_0                             0x00001a28   Number         4  clk.o(.text.CLK_GetPCLK1Freq)
+    __arm_cp.8_1                             0x00001a2c   Number         4  clk.o(.text.CLK_GetPCLK1Freq)
+    [Anonymous Symbol]                       0x00001a30   Section        0  clk.o(.text.CLK_GetPLLClockFreq)
+    __arm_cp.27_0                            0x00001ad4   Number         4  clk.o(.text.CLK_GetPLLClockFreq)
+    __arm_cp.27_1                            0x00001ad8   Number         4  clk.o(.text.CLK_GetPLLClockFreq)
+    __arm_cp.27_2                            0x00001adc   Number         4  clk.o(.text.CLK_GetPLLClockFreq)
+    __arm_cp.27_3                            0x00001ae0   Number         4  clk.o(.text.CLK_GetPLLClockFreq)
+    [Anonymous Symbol]                       0x00001ae4   Section        0  main.o(.text.CRPT_IRQHandler)
+    __arm_cp.7_0                             0x00001b48   Number         4  main.o(.text.CRPT_IRQHandler)
+    __arm_cp.7_1                             0x00001b4c   Number         4  main.o(.text.CRPT_IRQHandler)
+    __arm_cp.7_2                             0x00001b50   Number         4  main.o(.text.CRPT_IRQHandler)
+    __arm_cp.7_3                             0x00001b54   Number         4  main.o(.text.CRPT_IRQHandler)
+    __arm_cp.7_5                             0x00001b58   Number         4  main.o(.text.CRPT_IRQHandler)
+    __arm_cp.7_7                             0x00001b5c   Number         4  main.o(.text.CRPT_IRQHandler)
+    [Anonymous Symbol]                       0x00001b60   Section        0  system_m2351.o(.text.FMC_NSBA_Setup)
+    FMC_NSBA_Setup                           0x00001b61   Thumb Code   148  system_m2351.o(.text.FMC_NSBA_Setup)
+    __arm_cp.4_0                             0x00001bd4   Number         4  system_m2351.o(.text.FMC_NSBA_Setup)
+    __arm_cp.4_1                             0x00001bd8   Number         4  system_m2351.o(.text.FMC_NSBA_Setup)
+    __arm_cp.4_2                             0x00001bdc   Number         4  system_m2351.o(.text.FMC_NSBA_Setup)
+    __arm_cp.4_3                             0x00001be0   Number         4  system_m2351.o(.text.FMC_NSBA_Setup)
+    __arm_cp.4_4                             0x00001be4   Number         4  system_m2351.o(.text.FMC_NSBA_Setup)
+    __arm_cp.4_5                             0x00001be8   Number         4  system_m2351.o(.text.FMC_NSBA_Setup)
+    __arm_cp.4_6                             0x00001bec   Number         4  system_m2351.o(.text.FMC_NSBA_Setup)
+    __arm_cp.4_7                             0x00001bf0   Number         4  system_m2351.o(.text.FMC_NSBA_Setup)
+    [Anonymous Symbol]                       0x00001bf4   Section        0  gpio.o(.text.GPIO_SetMode)
+    [Anonymous Symbol]                       0x00001c50   Section        0  retarget.o(.text.GetChar)
+    [Anonymous Symbol]                       0x00001c6c   Section        0  retarget.o(.text.ProcessHardFault)
+    [Anonymous Symbol]                       0x00001ce8   Section        0  system_m2351.o(.text.SCU_Setup)
+    SCU_Setup                                0x00001ce9   Thumb Code   120  system_m2351.o(.text.SCU_Setup)
+    __arm_cp.3_0                             0x00001d3c   Number         4  system_m2351.o(.text.SCU_Setup)
+    __arm_cp.3_1                             0x00001d40   Number         4  system_m2351.o(.text.SCU_Setup)
+    __arm_cp.3_2                             0x00001d44   Number         4  system_m2351.o(.text.SCU_Setup)
+    __arm_cp.3_3                             0x00001d48   Number         4  system_m2351.o(.text.SCU_Setup)
+    __arm_cp.3_4                             0x00001d4c   Number         4  system_m2351.o(.text.SCU_Setup)
+    __arm_cp.3_5                             0x00001d50   Number         4  system_m2351.o(.text.SCU_Setup)
+    __arm_cp.3_6                             0x00001d54   Number         4  system_m2351.o(.text.SCU_Setup)
+    __arm_cp.3_7                             0x00001d58   Number         4  system_m2351.o(.text.SCU_Setup)
+    __arm_cp.3_8                             0x00001d5c   Number         4  system_m2351.o(.text.SCU_Setup)
+    [Anonymous Symbol]                       0x00001d60   Section        0  retarget.o(.text.SH_Return)
+    [Anonymous Symbol]                       0x00001d7c   Section        0  main.o(.text.SYS_LockReg)
+    SYS_LockReg                              0x00001d7d   Thumb Code    12  main.o(.text.SYS_LockReg)
+    [Anonymous Symbol]                       0x00001d84   Section        0  main.o(.text.SYS_UnlockReg)
+    SYS_UnlockReg                            0x00001d85   Thumb Code    36  main.o(.text.SYS_UnlockReg)
+    [Anonymous Symbol]                       0x00001da4   Section        0  system_m2351.o(.text.SYS_UnlockReg)
+    SYS_UnlockReg                            0x00001da5   Thumb Code    36  system_m2351.o(.text.SYS_UnlockReg)
+    __arm_cp.5_0                             0x00001dc4   Number         4  system_m2351.o(.text.SYS_UnlockReg)
+    [Anonymous Symbol]                       0x00001dc8   Section        0  main.o(.text.S_decrypt_cipher_value)
+    [Anonymous Symbol]                       0x00001de4   Section        0  main.o(.text.S_encrypt_secure_value)
+    [Anonymous Symbol]                       0x00001e00   Section        0  main.o(.text.S_get_cipher_value)
+    __arm_cp.1_0                             0x00001e50   Number         4  main.o(.text.S_get_cipher_value)
+    __arm_cp.1_2                             0x00001e54   Number         4  main.o(.text.S_get_cipher_value)
+    [Anonymous Symbol]                       0x00001e58   Section        0  main.o(.text.S_get_secure_value)
+    __arm_cp.0_0                             0x00001ea0   Number         4  main.o(.text.S_get_secure_value)
+    __arm_cp.0_1                             0x00001ea4   Number         4  main.o(.text.S_get_secure_value)
+    __arm_cp.0_2                             0x00001ea8   Number         4  main.o(.text.S_get_secure_value)
+    __arm_cp.0_3                             0x00001eac   Number         4  main.o(.text.S_get_secure_value)
+    [Anonymous Symbol]                       0x00001eb0   Section        0  retarget.o(.text.SendChar)
+    [Anonymous Symbol]                       0x00001ec4   Section        0  retarget.o(.text.SendChar_ToUART)
+    __arm_cp.2_0                             0x00001f0c   Number         4  retarget.o(.text.SendChar_ToUART)
+    __arm_cp.2_1                             0x00001f10   Number         4  retarget.o(.text.SendChar_ToUART)
+    [Anonymous Symbol]                       0x00001f14   Section        0  system_m2351.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_0                             0x00001f38   Number         4  system_m2351.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_1                             0x00001f3c   Number         4  system_m2351.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_2                             0x00001f40   Number         4  system_m2351.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_3                             0x00001f44   Number         4  system_m2351.o(.text.SystemCoreClockUpdate)
+    __arm_cp.0_4                             0x00001f48   Number         4  system_m2351.o(.text.SystemCoreClockUpdate)
+    [Anonymous Symbol]                       0x00001f4c   Section        0  system_m2351.o(.text.SystemInit)
+    __arm_cp.1_0                             0x00001f64   Number         4  system_m2351.o(.text.SystemInit)
+    __arm_cp.1_1                             0x00001f68   Number         4  system_m2351.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x00001f6c   Section        0  system_m2351.o(.text.TZ_SAU_Setup)
+    TZ_SAU_Setup                             0x00001f6d   Thumb Code   192  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_0                             0x00001fe0   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_1                             0x00001fe4   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_2                             0x00001fe8   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_3                             0x00001fec   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_4                             0x00001ff0   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_5                             0x00001ff4   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_6                             0x00001ff8   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_7                             0x00001ffc   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_8                             0x00002000   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_9                             0x00002004   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_10                            0x00002008   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_11                            0x0000200c   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_12                            0x00002010   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_13                            0x00002014   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_14                            0x00002018   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_15                            0x0000201c   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_16                            0x00002020   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_17                            0x00002024   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    __arm_cp.2_18                            0x00002028   Number         4  system_m2351.o(.text.TZ_SAU_Setup)
+    [Anonymous Symbol]                       0x0000202c   Section        0  main.o(.text.__NVIC_EnableIRQ)
+    __NVIC_EnableIRQ                         0x0000202d   Thumb Code    52  main.o(.text.__NVIC_EnableIRQ)
+    __arm_cp.16_0                            0x00002058   Number         4  main.o(.text.__NVIC_EnableIRQ)
+    __arm_cp.16_1                            0x0000205c   Number         4  main.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x00002060   Section        0  main.o(.text.decrypt)
+    __arm_cp.6_6                             0x000020c8   Number         4  main.o(.text.decrypt)
+    [Anonymous Symbol]                       0x000020cc   Section        0  main.o(.text.encrypt)
+    __arm_cp.4_0                             0x0000213c   Number         4  main.o(.text.encrypt)
+    __arm_cp.4_3                             0x00002140   Number         4  main.o(.text.encrypt)
+    __arm_cp.4_4                             0x00002144   Number         4  main.o(.text.encrypt)
+    __arm_cp.4_5                             0x00002148   Number         4  main.o(.text.encrypt)
+    __arm_cp.4_6                             0x0000214c   Number         4  main.o(.text.encrypt)
+    [Anonymous Symbol]                       0x00002150   Section        0  retarget.o(.text.fgetc)
+    [Anonymous Symbol]                       0x00002162   Section        0  retarget.o(.text.fputc)
+    [Anonymous Symbol]                       0x00002180   Section        0  main.o(.text.hex_to_byte)
+    __arm_cp.2_0                             0x00002218   Number         4  main.o(.text.hex_to_byte)
+    [Anonymous Symbol]                       0x0000221c   Section        0  main.o(.text.init_crypto)
+    __arm_cp.13_0                            0x0000225c   Number         4  main.o(.text.init_crypto)
+    __arm_cp.13_1                            0x00002260   Number         4  main.o(.text.init_crypto)
+    [Anonymous Symbol]                       0x00002264   Section        0  main.o(.text.init_debug_port)
+    __arm_cp.12_0                            0x00002274   Number         4  main.o(.text.init_debug_port)
+    __arm_cp.12_1                            0x00002278   Number         4  main.o(.text.init_debug_port)
+    __arm_cp.12_2                            0x0000227c   Number         4  main.o(.text.init_debug_port)
+    [Anonymous Symbol]                       0x00002280   Section        0  main.o(.text.init_non_secure)
+    __arm_cp.15_0                            0x00002374   Number         4  main.o(.text.init_non_secure)
+    __arm_cp.15_1                            0x00002378   Number         4  main.o(.text.init_non_secure)
+    __arm_cp.15_2                            0x0000237c   Number         4  main.o(.text.init_non_secure)
+    __arm_cp.15_3                            0x00002380   Number         4  main.o(.text.init_non_secure)
+    __arm_cp.15_4                            0x00002384   Number         4  main.o(.text.init_non_secure)
+    __arm_cp.15_5                            0x00002388   Number         4  main.o(.text.init_non_secure)
+    __arm_cp.15_6                            0x0000238c   Number         4  main.o(.text.init_non_secure)
+    __arm_cp.15_7                            0x00002390   Number         4  main.o(.text.init_non_secure)
+    __arm_cp.15_8                            0x00002394   Number         4  main.o(.text.init_non_secure)
+    [Anonymous Symbol]                       0x00002398   Section        0  main.o(.text.init_system)
+    __arm_cp.11_0                            0x00002428   Number         4  main.o(.text.init_system)
+    __arm_cp.11_1                            0x0000242c   Number         4  main.o(.text.init_system)
+    __arm_cp.11_2                            0x00002430   Number         4  main.o(.text.init_system)
+    __arm_cp.11_3                            0x00002434   Number         4  main.o(.text.init_system)
+    __arm_cp.11_4                            0x00002438   Number         4  main.o(.text.init_system)
+    __arm_cp.11_5                            0x0000243c   Number         4  main.o(.text.init_system)
+    __arm_cp.11_6                            0x00002440   Number         4  main.o(.text.init_system)
+    __arm_cp.11_7                            0x00002444   Number         4  main.o(.text.init_system)
+    __arm_cp.11_8                            0x00002448   Number         4  main.o(.text.init_system)
+    __arm_cp.11_9                            0x0000244c   Number         4  main.o(.text.init_system)
+    __arm_cp.11_10                           0x00002450   Number         4  main.o(.text.init_system)
+    __arm_cp.11_11                           0x00002454   Number         4  main.o(.text.init_system)
+    __arm_cp.11_12                           0x00002458   Number         4  main.o(.text.init_system)
+    __arm_cp.11_13                           0x0000245c   Number         4  main.o(.text.init_system)
+    __arm_cp.11_14                           0x00002460   Number         4  main.o(.text.init_system)
+    __arm_cp.11_15                           0x00002464   Number         4  main.o(.text.init_system)
+    [Anonymous Symbol]                       0x00002468   Section        0  main.o(.text.itsc_startup)
+    __arm_cp.17_0                            0x000024c0   Number         4  main.o(.text.itsc_startup)
+    __arm_cp.17_1                            0x000024c4   Number         4  main.o(.text.itsc_startup)
+    __arm_cp.17_2                            0x000024c8   Number         4  main.o(.text.itsc_startup)
+    __arm_cp.17_3                            0x000024cc   Number         4  main.o(.text.itsc_startup)
+    __arm_cp.17_4                            0x000024d0   Number         4  main.o(.text.itsc_startup)
+    __arm_cp.17_5                            0x000024d4   Number         4  main.o(.text.itsc_startup)
+    __arm_cp.17_6                            0x000024d8   Number         4  main.o(.text.itsc_startup)
+    __arm_cp.17_7                            0x000024dc   Number         4  main.o(.text.itsc_startup)
+    [Anonymous Symbol]                       0x000024e0   Section        0  main.o(.text.main)
+    __arm_cp.9_0                             0x00002528   Number         4  main.o(.text.main)
+    __arm_cp.9_1                             0x0000252c   Number         4  main.o(.text.main)
+    [Anonymous Symbol]                       0x00002530   Section        0  main.o(.text.print_hex)
+    __arm_cp.8_0                             0x0000256c   Number         4  main.o(.text.print_hex)
+    i.__0printf                              0x00002570   Section        0  printfa.o(i.__0printf)
+    i.__ARM_clz                              0x00002590   Section        0  depilogue.o(i.__ARM_clz)
+    i.__scatterload_copy                     0x000025be   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x000025cc   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x000025ce   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i._fp_digits                             0x000025dc   Section        0  printfa.o(i._fp_digits)
+    _fp_digits                               0x000025dd   Thumb Code   344  printfa.o(i._fp_digits)
+    i._is_digit                              0x00002750   Section        0  scanf_fp.o(i._is_digit)
+    i._printf_core                           0x00002760   Section        0  printfa.o(i._printf_core)
+    _printf_core                             0x00002761   Thumb Code  1754  printfa.o(i._printf_core)
+    i._printf_post_padding                   0x00002e4c   Section        0  printfa.o(i._printf_post_padding)
+    _printf_post_padding                     0x00002e4d   Thumb Code    32  printfa.o(i._printf_post_padding)
+    i._printf_pre_padding                    0x00002e6c   Section        0  printfa.o(i._printf_pre_padding)
+    _printf_pre_padding                      0x00002e6d   Thumb Code    44  printfa.o(i._printf_pre_padding)
+    i.fgets                                  0x00002e98   Section        0  fgets.o(i.fgets)
+    .constdata                               0x00002ed0   Section       64  ctype_c.o(.constdata)
+    .LCLK_SetModuleClock.au32SelTbl          0x00002f10   Data          16  clk.o(.rodata.cst16)
+    .LCLK_SetModuleClock.au32DivTbl          0x00002f20   Data          16  clk.o(.rodata.cst16)
+    .LCLK_GetModuleClockSource.au32SelTbl    0x00002f30   Data          16  clk.o(.rodata.cst16)
+    .LCLK_GetModuleClockDivider.au32DivTbl   0x00002f40   Data          16  clk.o(.rodata.cst16)
+    .LCLK_GetCPUFreq.au32ClkTbl              0x00002f50   Data          32  clk.o(.rodata.cst32)
+    [Anonymous Symbol]                       0x00002f70   Section        0  main.o(.rodata.str1.1)
+    .L.str.8                                 0x00002f70   Data          27  main.o(.rodata.str1.1)
+    .L.str.22                                0x00002f8b   Data          59  main.o(.rodata.str1.1)
+    .L.str.10                                0x00002fc6   Data          23  main.o(.rodata.str1.1)
+    .L.str.9                                 0x00002fdd   Data          23  main.o(.rodata.str1.1)
+    .L.str.3                                 0x00002ff4   Data          17  main.o(.rodata.str1.1)
+    .L.str.21                                0x00003005   Data          38  main.o(.rodata.str1.1)
+    .L.str.16                                0x0000302b   Data          40  main.o(.rodata.str1.1)
+    .L.str.17                                0x00003053   Data          40  main.o(.rodata.str1.1)
+    .L.str.18                                0x0000307b   Data          40  main.o(.rodata.str1.1)
+    .L.str.20                                0x000030a3   Data          40  main.o(.rodata.str1.1)
+    .L.str                                   0x000030cb   Data          22  main.o(.rodata.str1.1)
+    .L.str.2                                 0x000030e1   Data          20  main.o(.rodata.str1.1)
+    .L.str.19                                0x000030f5   Data          40  main.o(.rodata.str1.1)
+    .L.str.1                                 0x0000311d   Data          18  main.o(.rodata.str1.1)
+    .L.str.12                                0x0000312f   Data          31  main.o(.rodata.str1.1)
+    .L.str.7                                 0x0000314e   Data          87  main.o(.rodata.str1.1)
+    .L.str.11                                0x000031a5   Data          29  main.o(.rodata.str1.1)
+    .L.str.13                                0x000031c2   Data          37  main.o(.rodata.str1.1)
+    .L.str.6                                 0x000031e5   Data           2  main.o(.rodata.str1.1)
+    .L.str.4                                 0x000031e7   Data          16  main.o(.rodata.str1.1)
+    .L.str.5                                 0x000031f7   Data          18  main.o(.rodata.str1.1)
+    .L.str.14                                0x00003209   Data           5  main.o(.rodata.str1.1)
+    .L.str.15                                0x0000320e   Data           6  main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x200004f0   Section        0  crypto.o(.bss.g_AES_CTL)
+    g_AES_CTL                                0x200004f0   Data          16  crypto.o(.bss.g_AES_CTL)
+    STACK                                    0x20000608   Section     2048  startup_m2351.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$8M$PE$A:L22$X:L11$S22$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$WCHAR32$ENUMINT$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_m2351.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_End                            0x000001d8   Data           0  startup_m2351.o(RESET)
+    __Vectors_Size                           0x000001d8   Number         0  startup_m2351.o ABSOLUTE
+    __main                                   0x000001d9   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000001d9   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000001dd   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000001e1   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000001e1   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000001e1   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000001e1   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000001e9   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000001e9   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x000001ed   Thumb Code     8  startup_m2351.o(.text)
+    NMI_Handler                              0x000001f5   Thumb Code     2  startup_m2351.o(.text)
+    HardFault_Handler                        0x000001f7   Thumb Code    16  startup_m2351.o(.text)
+    ProcessHardFaultx                        0x00000207   Thumb Code     2  startup_m2351.o(.text)
+    SVC_Handler                              0x00000209   Thumb Code     2  startup_m2351.o(.text)
+    PendSV_Handler                           0x0000020b   Thumb Code     2  startup_m2351.o(.text)
+    SysTick_Handler                          0x0000020d   Thumb Code     2  startup_m2351.o(.text)
+    ACMP01_IRQHandler                        0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    BOD_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    BPWM0_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    BPWM1_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    BRAKE0_IRQHandler                        0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    BRAKE1_IRQHandler                        0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    CAN0_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    CAN1_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    CLKFAIL_IRQHandler                       0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    DAC_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    DEFAULT_IRQHandler                       0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EADC0_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EADC1_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EADC2_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EADC3_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    ECAP0_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    ECAP1_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EINT0_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EINT1_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EINT2_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EINT3_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EINT4_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EINT5_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EINT6_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EINT7_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EPWM0_P0_IRQHandler                      0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EPWM0_P1_IRQHandler                      0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EPWM0_P2_IRQHandler                      0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EPWM1_P0_IRQHandler                      0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EPWM1_P1_IRQHandler                      0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    EPWM1_P2_IRQHandler                      0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    GPA_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    GPB_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    GPC_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    GPD_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    GPE_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    GPF_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    GPG_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    GPH_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    I2C0_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    I2C1_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    I2C2_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    I2S0_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    IRC_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    OPA0_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    PDMA0_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    PDMA1_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    PWRWU_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    QEI0_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    QEI1_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    QSPI0_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    RTC_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SC0_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SC1_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SC2_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SC3_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SCU_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SDH0_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SDH1_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SPI0_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SPI1_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SPI2_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SPI3_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SRAM_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    TAMPER_IRQHandler                        0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    TMR0_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    TMR1_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    TMR2_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    TMR3_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    TRNG_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    UART0_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    UART1_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    UART2_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    UART3_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    UART4_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    UART5_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    USBD_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    USBH_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    USBOTG_IRQHandler                        0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    USCI0_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    USCI1_IRQHandler                         0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    WDT_IRQHandler                           0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    WWDT_IRQHandler                          0x0000020f   Thumb Code     0  startup_m2351.o(.text)
+    SH_DoCommand                             0x00000211   Thumb Code    10  startup_m2351.o(.text)
+    __PC                                     0x0000021b   Thumb Code     6  startup_m2351.o(.text)
+    strlen                                   0x00000231   Thumb Code    14  strlen.o(.text)
+    sscanf                                   0x00000241   Thumb Code    50  sscanf.o(.text)
+    __aeabi_uidiv                            0x0000027d   Thumb Code     0  uidiv.o(.text)
+    __aeabi_uidivmod                         0x0000027d   Thumb Code    44  uidiv.o(.text)
+    __aeabi_uldivmod                         0x000002a9   Thumb Code    96  uldiv.o(.text)
+    _scanf_longlong                          0x00000309   Thumb Code   330  _scanf_longlong.o(.text)
+    _scanf_int                               0x00000453   Thumb Code   330  _scanf_int.o(.text)
+    _scanf_string                            0x0000059d   Thumb Code   232  _scanf_str.o(.text)
+    _scanf_real                              0x000007a3   Thumb Code     0  scanf_fp.o(.text)
+    _scanf_really_real                       0x000007a3   Thumb Code   584  scanf_fp.o(.text)
+    __vfscanf_char                           0x00000a05   Thumb Code    24  scanf_char.o(.text)
+    _sgetc                                   0x00000a25   Thumb Code    32  _sgetc.o(.text)
+    _sbackspace                              0x00000a45   Thumb Code    36  _sgetc.o(.text)
+    __I$use$fp                               0x00000a69   Thumb Code     0  iusefp.o(.text)
+    __aeabi_dadd                             0x00000a69   Thumb Code   328  dadd.o(.text)
+    __aeabi_dsub                             0x00000bb1   Thumb Code    12  dadd.o(.text)
+    __aeabi_drsub                            0x00000bbd   Thumb Code    12  dadd.o(.text)
+    __aeabi_dmul                             0x00000bcd   Thumb Code   202  dmul.o(.text)
+    __aeabi_ddiv                             0x00000c9d   Thumb Code   234  ddiv.o(.text)
+    __aeabi_d2ulz                            0x00000d8d   Thumb Code    54  dfixul.o(.text)
+    __aeabi_cdrcmple                         0x00000dcd   Thumb Code    38  cdrcmple.o(.text)
+    __scatterload                            0x00000df5   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000df5   Thumb Code     0  init.o(.text)
+    __aeabi_lmul                             0x00000e19   Thumb Code   122  llmul.o(.text)
+    _ll_mul                                  0x00000e19   Thumb Code     0  llmul.o(.text)
+    __aeabi_llsl                             0x00000e93   Thumb Code    32  llshl.o(.text)
+    _ll_shift_l                              0x00000e93   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x00000eb3   Thumb Code    34  llushr.o(.text)
+    _ll_ushift_r                             0x00000eb3   Thumb Code     0  llushr.o(.text)
+    __aeabi_lasr                             0x00000ed5   Thumb Code    38  llsshr.o(.text)
+    _ll_sshift_r                             0x00000ed5   Thumb Code     0  llsshr.o(.text)
+    isspace                                  0x00000efb   Thumb Code    14  isspace_c.o(.text)
+    _chval                                   0x00000f09   Thumb Code    30  _chval.o(.text)
+    __vfscanf                                0x00000f29   Thumb Code   812  _scanf.o(.text)
+    _double_round                            0x00001261   Thumb Code    26  depilogue.o(.text)
+    _double_epilogue                         0x0000127b   Thumb Code   164  depilogue.o(.text)
+    __aeabi_ul2d                             0x00001321   Thumb Code    22  dfltul.o(.text)
+    __aeabi_d2f                              0x0000133d   Thumb Code    56  d2f.o(.text)
+    __ctype_lookup                           0x00001375   Thumb Code    32  ctype_c.o(.text)
+    _float_round                             0x00001399   Thumb Code    16  fepilogue.o(.text)
+    _float_epilogue                          0x000013a9   Thumb Code   114  fepilogue.o(.text)
+    AES_Open                                 0x0000141d   Thumb Code    96  crypto.o(.text.AES_Open)
+    AES_SetDMATransfer                       0x00001479   Thumb Code   110  crypto.o(.text.AES_SetDMATransfer)
+    AES_SetInitVect                          0x000014e7   Thumb Code    86  crypto.o(.text.AES_SetInitVect)
+    AES_SetKey                               0x0000153d   Thumb Code   102  crypto.o(.text.AES_SetKey)
+    AES_Start                                0x000015a5   Thumb Code    64  crypto.o(.text.AES_Start)
+    BL_Random                                0x000015e5   Thumb Code    54  mkrom_api.o(.text.BL_Random)
+    BL_RandomInit                            0x0000161b   Thumb Code    44  mkrom_api.o(.text.BL_RandomInit)
+    __acle_se_CLK_GetCPUFreq                 0x00001649   Thumb Code     0  clk.o(.text.CLK_GetCPUFreq)
+    __acle_se_CLK_GetHCLKFreq                0x000017d5   Thumb Code     0  clk.o(.text.CLK_GetHCLKFreq)
+    __acle_se_CLK_GetHXTFreq                 0x000017f5   Thumb Code     0  clk.o(.text.CLK_GetHXTFreq)
+    __acle_se_CLK_GetLXTFreq                 0x00001831   Thumb Code     0  clk.o(.text.CLK_GetLXTFreq)
+    __acle_se_CLK_GetModuleClockDivider      0x0000186d   Thumb Code     0  clk.o(.text.CLK_GetModuleClockDivider)
+    __acle_se_CLK_GetModuleClockSource       0x000018e1   Thumb Code     0  clk.o(.text.CLK_GetModuleClockSource)
+    __acle_se_CLK_GetPCLK0Freq               0x000019d5   Thumb Code     0  clk.o(.text.CLK_GetPCLK0Freq)
+    __acle_se_CLK_GetPCLK1Freq               0x000019fd   Thumb Code     0  clk.o(.text.CLK_GetPCLK1Freq)
+    __acle_se_CLK_GetPLLClockFreq            0x00001a31   Thumb Code     0  clk.o(.text.CLK_GetPLLClockFreq)
+    CRPT_IRQHandler                          0x00001ae5   Thumb Code   132  main.o(.text.CRPT_IRQHandler)
+    GPIO_SetMode                             0x00001bf5   Thumb Code    90  gpio.o(.text.GPIO_SetMode)
+    GetChar                                  0x00001c51   Thumb Code    36  retarget.o(.text.GetChar)
+    ProcessHardFault                         0x00001c6d   Thumb Code   122  retarget.o(.text.ProcessHardFault)
+    SH_Return                                0x00001d61   Thumb Code    28  retarget.o(.text.SH_Return)
+    __acle_se_S_decrypt_cipher_value         0x00001dc9   Thumb Code     0  main.o(.text.S_decrypt_cipher_value)
+    __acle_se_S_encrypt_secure_value         0x00001de5   Thumb Code     0  main.o(.text.S_encrypt_secure_value)
+    __acle_se_S_get_cipher_value             0x00001e01   Thumb Code     0  main.o(.text.S_get_cipher_value)
+    __acle_se_S_get_secure_value             0x00001e59   Thumb Code     0  main.o(.text.S_get_secure_value)
+    SendChar                                 0x00001eb1   Thumb Code    20  retarget.o(.text.SendChar)
+    SendChar_ToUART                          0x00001ec5   Thumb Code    80  retarget.o(.text.SendChar_ToUART)
+    SystemCoreClockUpdate                    0x00001f15   Thumb Code    56  system_m2351.o(.text.SystemCoreClockUpdate)
+    SystemInit                               0x00001f4d   Thumb Code    32  system_m2351.o(.text.SystemInit)
+    decrypt                                  0x00002061   Thumb Code   132  main.o(.text.decrypt)
+    encrypt                                  0x000020cd   Thumb Code   140  main.o(.text.encrypt)
+    fgetc                                    0x00002151   Thumb Code    18  retarget.o(.text.fgetc)
+    fputc                                    0x00002163   Thumb Code    28  retarget.o(.text.fputc)
+    hex_to_byte                              0x00002181   Thumb Code   156  main.o(.text.hex_to_byte)
+    init_crypto                              0x0000221d   Thumb Code    72  main.o(.text.init_crypto)
+    init_debug_port                          0x00002265   Thumb Code    28  main.o(.text.init_debug_port)
+    init_non_secure                          0x00002281   Thumb Code   280  main.o(.text.init_non_secure)
+    init_system                              0x00002399   Thumb Code   208  main.o(.text.init_system)
+    itsc_startup                             0x00002469   Thumb Code   120  main.o(.text.itsc_startup)
+    main                                     0x000024e1   Thumb Code    80  main.o(.text.main)
+    print_hex                                0x00002531   Thumb Code    64  main.o(.text.print_hex)
+    __0printf                                0x00002571   Thumb Code    24  printfa.o(i.__0printf)
+    __1printf                                0x00002571   Thumb Code     0  printfa.o(i.__0printf)
+    __2printf                                0x00002571   Thumb Code     0  printfa.o(i.__0printf)
+    __c89printf                              0x00002571   Thumb Code     0  printfa.o(i.__0printf)
+    printf                                   0x00002571   Thumb Code     0  printfa.o(i.__0printf)
+    __ARM_clz                                0x00002591   Thumb Code    46  depilogue.o(i.__ARM_clz)
+    __scatterload_copy                       0x000025bf   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x000025cd   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x000025cf   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    _is_digit                                0x00002751   Thumb Code    14  scanf_fp.o(i._is_digit)
+    fgets                                    0x00002e99   Thumb Code    56  fgets.o(i.fgets)
+    __ctype_categories                       0x00002ed0   Data          64  ctype_c.o(.constdata)
+    Region$$Table$$Base                      0x00003214   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00003234   Number         0  anon$$obj.o(Region$$Table)
+    S_decrypt_cipher_value                   0x0003f001   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    S_encrypt_secure_value                   0x0003f009   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    S_get_cipher_value                       0x0003f011   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    S_get_secure_value                       0x0003f019   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    CLK_GetCPUFreq                           0x0003f021   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    CLK_GetHCLKFreq                          0x0003f029   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    CLK_GetHXTFreq                           0x0003f031   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    CLK_GetLXTFreq                           0x0003f039   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    CLK_GetModuleClockDivider                0x0003f041   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    CLK_GetModuleClockSource                 0x0003f049   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    CLK_GetPCLK0Freq                         0x0003f051   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    CLK_GetPCLK1Freq                         0x0003f059   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    CLK_GetPLLClockFreq                      0x0003f061   Thumb Code     8  anon$$obj.o(Veneer$$CMSE)
+    RESERVED01                               0x00807e01   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_CheckFlashAllOne                      0x00807e09   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_DisableFMC                            0x00807e11   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_EnableFMC                             0x00807e19   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_EraseXOMRegion                        0x00807e21   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_FlashChecksum                         0x00807e29   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_FlashMultiRead                        0x00807e31   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_FlashMultiWrite                       0x00807e39   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_FlashPageErase                        0x00807e41   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_FlashRead                             0x00807e49   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_FlashWrite                            0x00807e51   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_GetIDECCSignature                     0x00807e59   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_GetISPStatus                          0x00807e61   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_GetKPROMCounter                       0x00807e69   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_GetKPROMPowerOnCounter                0x00807e71   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_GetKPROMStatus                        0x00807e79   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_GetNSBoundary                         0x00807e81   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_GetVersion                            0x00807e89   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_GetXOMActiveStatus                    0x00807e91   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_GetXOMEraseStatus                     0x00807e99   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    RESERVED02                               0x00807ea1   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    RESERVED03                               0x00807ea9   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    RESERVED04                               0x00807eb1   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    RESERVED05                               0x00807eb9   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    RESERVED06                               0x00807ec1   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    RESERVED07                               0x00807ec9   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    RESERVED08                               0x00807ed1   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_ReadCID                               0x00807ed9   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_ReadDID                               0x00807ee1   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    RESERVED09                               0x00807ee9   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_ReadPID                               0x00807ef1   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_ReadUCID                              0x00807ef9   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_ReadUID                               0x00807f01   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_ReadXOMRegion                         0x00807f09   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_ResetChip                             0x00807f11   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_SetFlashAllLock                       0x00807f19   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    RESERVED10                               0x00807f21   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_SetXOMRegion                          0x00807f29   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_TrgKPROMCompare                       0x00807f31   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    BL_XFlashBlockErase                      0x00807f39   Thumb Code     8  mkromlib_nsc.o ABSOLUTE
+    CyclesPerUs                              0x20000000   Data           4  system_m2351.o(.data.CyclesPerUs)
+    PllClock                                 0x20000004   Data           4  system_m2351.o(.data.PllClock)
+    SystemCoreClock                          0x20000008   Data           4  system_m2351.o(.data.SystemCoreClock)
+    xBL_Random                               0x2000000c   Data           4  mkrom_api.o(.data.xBL_Random)
+    xBL_RandomInit                           0x20000010   Data           4  mkrom_api.o(.data.xBL_RandomInit)
+    __stdin                                  0x20000018   Data          84  retarget.o(.bss.__stdin)
+    __stdout                                 0x2000006c   Data          84  retarget.o(.bss.__stdout)
+    aes_iv                                   0x200000c0   Data          16  main.o(.bss.aes_iv)
+    aes_key                                  0x200000d0   Data          32  main.o(.bss.aes_key)
+    cipher_value                             0x200000f0   Data        1024  main.o(.bss.cipher_value)
+    is_encrypt                               0x20000500   Data           4  main.o(.bss.is_encrypt)
+    secret_value                             0x20000504   Data         256  main.o(.bss.secret_value)
+    __initial_sp                             0x20000e08   Data           0  startup_m2351.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000001d9
+
+  Load Region LR_ROM (Base: 0x00000000, Size: 0x00003250, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region EXE_ROM (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00003234, Max: 0x00040000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000001d8   Data   RO           81    RESET               startup_m2351.o
+    0x000001d8   0x000001d8   0x00000000   Code   RO          411  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000001d8   0x000001d8   0x00000004   Code   RO          454    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000001dc   0x000001dc   0x00000004   Code   RO          457    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000001e0   0x000001e0   0x00000000   Code   RO          459    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000001e0   0x000001e0   0x00000000   Code   RO          461    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000001e0   0x000001e0   0x00000008   Code   RO          462    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000001e8   0x000001e8   0x00000000   Code   RO          464    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x000001e8   0x000001e8   0x00000000   Code   RO          466    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x000001e8   0x000001e8   0x00000004   Code   RO          455    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000001ec   0x000001ec   0x00000044   Code   RO           82    .text               startup_m2351.o
+    0x00000230   0x00000230   0x0000000e   Code   RO          418    .text               mc_p.l(strlen.o)
+    0x0000023e   0x0000023e   0x00000002   PAD
+    0x00000240   0x00000240   0x0000003c   Code   RO          452    .text               mc_p.l(sscanf.o)
+    0x0000027c   0x0000027c   0x0000002c   Code   RO          468    .text               mc_p.l(uidiv.o)
+    0x000002a8   0x000002a8   0x00000060   Code   RO          470    .text               mc_p.l(uldiv.o)
+    0x00000308   0x00000308   0x0000014a   Code   RO          474    .text               mc_p.l(_scanf_longlong.o)
+    0x00000452   0x00000452   0x0000014a   Code   RO          476    .text               mc_p.l(_scanf_int.o)
+    0x0000059c   0x0000059c   0x000000e8   Code   RO          478    .text               mc_p.l(_scanf_str.o)
+    0x00000684   0x00000684   0x00000374   Code   RO          480    .text               mc_p.l(scanf_fp.o)
+    0x000009f8   0x000009f8   0x0000002c   Code   RO          484    .text               mc_p.l(scanf_char.o)
+    0x00000a24   0x00000a24   0x00000044   Code   RO          486    .text               mc_p.l(_sgetc.o)
+    0x00000a68   0x00000a68   0x00000000   Code   RO          488    .text               mc_p.l(iusefp.o)
+    0x00000a68   0x00000a68   0x00000164   Code   RO          489    .text               mf_p.l(dadd.o)
+    0x00000bcc   0x00000bcc   0x000000d0   Code   RO          491    .text               mf_p.l(dmul.o)
+    0x00000c9c   0x00000c9c   0x000000f0   Code   RO          493    .text               mf_p.l(ddiv.o)
+    0x00000d8c   0x00000d8c   0x00000040   Code   RO          495    .text               mf_p.l(dfixul.o)
+    0x00000dcc   0x00000dcc   0x00000028   Code   RO          497    .text               mf_p.l(cdrcmple.o)
+    0x00000df4   0x00000df4   0x00000024   Code   RO          499    .text               mc_p.l(init.o)
+    0x00000e18   0x00000e18   0x0000007a   Code   RO          501    .text               mc_p.l(llmul.o)
+    0x00000e92   0x00000e92   0x00000020   Code   RO          503    .text               mc_p.l(llshl.o)
+    0x00000eb2   0x00000eb2   0x00000022   Code   RO          505    .text               mc_p.l(llushr.o)
+    0x00000ed4   0x00000ed4   0x00000026   Code   RO          507    .text               mc_p.l(llsshr.o)
+    0x00000efa   0x00000efa   0x0000000e   Code   RO          509    .text               mc_p.l(isspace_c.o)
+    0x00000f08   0x00000f08   0x0000001e   Code   RO          511    .text               mc_p.l(_chval.o)
+    0x00000f26   0x00000f26   0x00000002   PAD
+    0x00000f28   0x00000f28   0x00000338   Code   RO          513    .text               mc_p.l(_scanf.o)
+    0x00001260   0x00001260   0x000000be   Code   RO          515    .text               mf_p.l(depilogue.o)
+    0x0000131e   0x0000131e   0x00000002   PAD
+    0x00001320   0x00001320   0x0000001c   Code   RO          519    .text               mf_p.l(dfltul.o)
+    0x0000133c   0x0000133c   0x00000038   Code   RO          521    .text               mf_p.l(d2f.o)
+    0x00001374   0x00001374   0x00000024   Code   RO          523    .text               mc_p.l(ctype_c.o)
+    0x00001398   0x00001398   0x00000082   Code   RO          526    .text               mf_p.l(fepilogue.o)
+    0x0000141a   0x0000141a   0x00000002   PAD
+    0x0000141c   0x0000141c   0x0000005c   Code   RO          222    .text.AES_Open      crypto.o
+    0x00001478   0x00001478   0x0000006e   Code   RO          230    .text.AES_SetDMATransfer  crypto.o
+    0x000014e6   0x000014e6   0x00000056   Code   RO          228    .text.AES_SetInitVect  crypto.o
+    0x0000153c   0x0000153c   0x00000066   Code   RO          226    .text.AES_SetKey    crypto.o
+    0x000015a2   0x000015a2   0x00000002   PAD
+    0x000015a4   0x000015a4   0x00000040   Code   RO          224    .text.AES_Start     crypto.o
+    0x000015e4   0x000015e4   0x00000036   Code   RO          350    .text.BL_Random     MKROMLib_Keil.lib(mkrom_api.o)
+    0x0000161a   0x0000161a   0x0000002c   Code   RO          348    .text.BL_RandomInit  MKROMLib_Keil.lib(mkrom_api.o)
+    0x00001646   0x00001646   0x00000002   PAD
+    0x00001648   0x00001648   0x0000018c   Code   RO          141    .text.CLK_GetCPUFreq  clk.o
+    0x000017d4   0x000017d4   0x00000020   Code   RO          135    .text.CLK_GetHCLKFreq  clk.o
+    0x000017f4   0x000017f4   0x0000003c   Code   RO          131    .text.CLK_GetHXTFreq  clk.o
+    0x00001830   0x00001830   0x0000003c   Code   RO          133    .text.CLK_GetLXTFreq  clk.o
+    0x0000186c   0x0000186c   0x00000074   Code   RO          181    .text.CLK_GetModuleClockDivider  clk.o
+    0x000018e0   0x000018e0   0x000000f4   Code   RO          179    .text.CLK_GetModuleClockSource  clk.o
+    0x000019d4   0x000019d4   0x00000028   Code   RO          137    .text.CLK_GetPCLK0Freq  clk.o
+    0x000019fc   0x000019fc   0x00000034   Code   RO          139    .text.CLK_GetPCLK1Freq  clk.o
+    0x00001a30   0x00001a30   0x000000b4   Code   RO          177    .text.CLK_GetPLLClockFreq  clk.o
+    0x00001ae4   0x00001ae4   0x0000007c   Code   RO           16    .text.CRPT_IRQHandler  main.o
+    0x00001b60   0x00001b60   0x00000094   Code   RO           62    .text.FMC_NSBA_Setup  system_m2351.o
+    0x00001bf4   0x00001bf4   0x0000005a   Code   RO          196    .text.GPIO_SetMode  gpio.o
+    0x00001c4e   0x00001c4e   0x00000002   PAD
+    0x00001c50   0x00001c50   0x0000001c   Code   RO           97    .text.GetChar       retarget.o
+    0x00001c6c   0x00001c6c   0x0000007a   Code   RO           89    .text.ProcessHardFault  retarget.o
+    0x00001ce6   0x00001ce6   0x00000002   PAD
+    0x00001ce8   0x00001ce8   0x00000078   Code   RO           60    .text.SCU_Setup     system_m2351.o
+    0x00001d60   0x00001d60   0x0000001c   Code   RO           91    .text.SH_Return     retarget.o
+    0x00001d7c   0x00001d7c   0x00000008   Code   RO           30    .text.SYS_LockReg   main.o
+    0x00001d84   0x00001d84   0x00000020   Code   RO           22    .text.SYS_UnlockReg  main.o
+    0x00001da4   0x00001da4   0x00000024   Code   RO           64    .text.SYS_UnlockReg  system_m2351.o
+    0x00001dc8   0x00001dc8   0x0000001c   Code   RO           12    .text.S_decrypt_cipher_value  main.o
+    0x00001de4   0x00001de4   0x0000001c   Code   RO            8    .text.S_encrypt_secure_value  main.o
+    0x00001e00   0x00001e00   0x00000058   Code   RO            4    .text.S_get_cipher_value  main.o
+    0x00001e58   0x00001e58   0x00000058   Code   RO            2    .text.S_get_secure_value  main.o
+    0x00001eb0   0x00001eb0   0x00000014   Code   RO           95    .text.SendChar      retarget.o
+    0x00001ec4   0x00001ec4   0x00000050   Code   RO           93    .text.SendChar_ToUART  retarget.o
+    0x00001f14   0x00001f14   0x00000038   Code   RO           54    .text.SystemCoreClockUpdate  system_m2351.o
+    0x00001f4c   0x00001f4c   0x00000020   Code   RO           56    .text.SystemInit    system_m2351.o
+    0x00001f6c   0x00001f6c   0x000000c0   Code   RO           58    .text.TZ_SAU_Setup  system_m2351.o
+    0x0000202c   0x0000202c   0x00000034   Code   RO           34    .text.__NVIC_EnableIRQ  main.o
+    0x00002060   0x00002060   0x0000006c   Code   RO           14    .text.decrypt       main.o
+    0x000020cc   0x000020cc   0x00000084   Code   RO           10    .text.encrypt       main.o
+    0x00002150   0x00002150   0x00000012   Code   RO          107    .text.fgetc         retarget.o
+    0x00002162   0x00002162   0x0000001c   Code   RO          105    .text.fputc         retarget.o
+    0x0000217e   0x0000217e   0x00000002   PAD
+    0x00002180   0x00002180   0x0000009c   Code   RO            6    .text.hex_to_byte   main.o
+    0x0000221c   0x0000221c   0x00000048   Code   RO           28    .text.init_crypto   main.o
+    0x00002264   0x00002264   0x0000001c   Code   RO           26    .text.init_debug_port  main.o
+    0x00002280   0x00002280   0x00000118   Code   RO           32    .text.init_non_secure  main.o
+    0x00002398   0x00002398   0x000000d0   Code   RO           24    .text.init_system   main.o
+    0x00002468   0x00002468   0x00000078   Code   RO           36    .text.itsc_startup  main.o
+    0x000024e0   0x000024e0   0x00000050   Code   RO           20    .text.main          main.o
+    0x00002530   0x00002530   0x00000040   Code   RO           18    .text.print_hex     main.o
+    0x00002570   0x00002570   0x00000020   Code   RO          425    i.__0printf         mc_p.l(printfa.o)
+    0x00002590   0x00002590   0x0000002e   Code   RO          517    i.__ARM_clz         mf_p.l(depilogue.o)
+    0x000025be   0x000025be   0x0000000e   Code   RO          531    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x000025cc   0x000025cc   0x00000002   Code   RO          532    i.__scatterload_null  mc_p.l(handlers.o)
+    0x000025ce   0x000025ce   0x0000000e   Code   RO          533    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x000025dc   0x000025dc   0x00000174   Code   RO          432    i._fp_digits        mc_p.l(printfa.o)
+    0x00002750   0x00002750   0x0000000e   Code   RO          482    i._is_digit         mc_p.l(scanf_fp.o)
+    0x0000275e   0x0000275e   0x00000002   PAD
+    0x00002760   0x00002760   0x000006ec   Code   RO          433    i._printf_core      mc_p.l(printfa.o)
+    0x00002e4c   0x00002e4c   0x00000020   Code   RO          434    i._printf_post_padding  mc_p.l(printfa.o)
+    0x00002e6c   0x00002e6c   0x0000002c   Code   RO          435    i._printf_pre_padding  mc_p.l(printfa.o)
+    0x00002e98   0x00002e98   0x00000038   Code   RO          414    i.fgets             mc_p.l(fgets.o)
+    0x00002ed0   0x00002ed0   0x00000040   Data   RO          524    .constdata          mc_p.l(ctype_c.o)
+    0x00002f10   0x00002f10   0x00000040   Data   RO          185    .rodata.cst16       clk.o
+    0x00002f50   0x00002f50   0x00000020   Data   RO          183    .rodata.cst32       clk.o
+    0x00002f70   0x00002f70   0x000002a4   Data   RO           39    .rodata.str1.1      main.o
+    0x00003214   0x00003214   0x00000020   Data   RO          528    Region$$Table       anon$$obj.o
+
+
+    Execution Region EXE_RAM (Exec base: 0x20000000, Load base: 0x00003238, Size: 0x00000e08, Max: 0x00008000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00003238   0x00000004   Data   RW           67    .data.CyclesPerUs   system_m2351.o
+    0x20000004   0x0000323c   0x00000004   Data   RW           68    .data.PllClock      system_m2351.o
+    0x20000008   0x00003240   0x00000004   Data   RW           66    .data.SystemCoreClock  system_m2351.o
+    0x2000000c   0x00003244   0x00000004   Data   RW          399    .data.xBL_Random    MKROMLib_Keil.lib(mkrom_api.o)
+    0x20000010   0x00003248   0x00000004   Data   RW          398    .data.xBL_RandomInit  MKROMLib_Keil.lib(mkrom_api.o)
+    0x20000014   0x0000324c   0x00000004   PAD
+    0x20000018        -       0x00000054   Zero   RW          112    .bss.__stdin        retarget.o
+    0x2000006c        -       0x00000054   Zero   RW          111    .bss.__stdout       retarget.o
+    0x200000c0        -       0x00000010   Zero   RW           38    .bss.aes_iv         main.o
+    0x200000d0        -       0x00000020   Zero   RW           43    .bss.aes_key        main.o
+    0x200000f0        -       0x00000400   Zero   RW           41    .bss.cipher_value   main.o
+    0x200004f0        -       0x00000010   Zero   RW          284    .bss.g_AES_CTL      crypto.o
+    0x20000500        -       0x00000004   Zero   RW           42    .bss.is_encrypt     main.o
+    0x20000504        -       0x00000100   Zero   RW           40    .bss.secret_value   main.o
+    0x20000604   0x0000324c   0x00000004   PAD
+    0x20000608        -       0x00000800   Zero   RW           79    STACK               startup_m2351.o
+
+
+
+  Load Region LR_NSC (Base: 0x0003f000, Size: 0x00000080, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region NSC (Exec base: 0x0003f000, Load base: 0x0003f000, Size: 0x00000080, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x0003f000   0x0003f000   0x00000080   Code   XO          530    Veneer$$CMSE        anon$$obj.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      1180        108         96          0          0      12452   clk.o
+       454          4          0          0         16      32971   crypto.o
+        90          0          0          0          0       2288   gpio.o
+      1696        248        676          0       1332      12640   main.o
+       324          8          0          0        168       3619   retarget.o
+        68         18        472          0       2048        872   startup_m2351.o
+       584        176          0         12          0       5964   system_m2351.o
+
+    ----------------------------------------------------------------------
+      4532        562       1276         12       3568      70806   Object Totals
+       128          0         32          0          0          0   (incl. Generated)
+         8          0          0          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+        98          0          0          8          0          0   mkrom_api.o
+        30          0          0          0          0         60   _chval.o
+       824         12          0          0          0         84   _scanf.o
+       330          0          0          0          0         84   _scanf_int.o
+       330          0          0          0          0         84   _scanf_longlong.o
+       232          0          0          0          0         84   _scanf_str.o
+        68          0          0          0          0         76   _sgetc.o
+        36          4         64          0          0         60   ctype_c.o
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        56          0          0          0          0         76   fgets.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        14          0          0          0          0         68   isspace_c.o
+         0          0          0          0          0          0   iusefp.o
+       122          0          0          0          0         84   llmul.o
+        32          0          0          0          0         68   llshl.o
+        38          0          0          0          0         68   llsshr.o
+        34          0          0          0          0         68   llushr.o
+      2252         98          0          0          0        412   printfa.o
+        44          8          0          0          0         84   scanf_char.o
+       898         14          0          0          0        184   scanf_fp.o
+        60         10          0          0          0         84   sscanf.o
+        14          0          0          0          0         60   strlen.o
+        44          0          0          0          0         72   uidiv.o
+        96          0          0          0          0         84   uldiv.o
+        40          2          0          0          0         68   cdrcmple.o
+        56          0          0          0          0         68   d2f.o
+       356          4          0          0          0        140   dadd.o
+       240          6          0          0          0         84   ddiv.o
+       236          0          0          0          0        216   depilogue.o
+        64         10          0          0          0         68   dfixul.o
+        28          6          0          0          0         68   dfltul.o
+       208          6          0          0          0         88   dmul.o
+       130          0          0          0          0        144   fepilogue.o
+
+    ----------------------------------------------------------------------
+      7108        196         64          8          4       2956   Library Totals
+        12          0          0          0          4          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+        98          0          0          8          0          0   MKROMLib_Keil.lib
+      5640        162         64          0          0       2012   mc_p.l
+      1358         34          0          0          0        944   mf_p.l
+
+    ----------------------------------------------------------------------
+      7108        196         64          8          4       2956   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     11640        758       1340         20       3572      72374   Grand Totals
+     11640        758       1340         20       3572      72374   ELF Image Totals
+     11640        758       1340         20          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                12980 (  12.68kB)
+    Total RW  Size (RW Data + ZI Data)              3592 (   3.51kB)
+    Total ROM Size (Code + RO Data + RW Data)      13000 (  12.70kB)
+
+==============================================================================
+

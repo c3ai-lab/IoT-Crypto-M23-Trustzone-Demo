@@ -1,0 +1,15 @@
+--cpu=Cortex-M23
+".\objects\main.o"
+".\objects\system_m2351.o"
+".\objects\startup_m2351.o"
+".\objects\retarget.o"
+".\objects\clk.o"
+".\objects\gpio.o"
+"C:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_M2351_BSP\1.0.0\Device\M2351\StdDriver\src\MKROMLib_Keil.lib"
+".\objects\crypto.o"
+"C:\Keil_v5\ARM\PACK\Nuvoton\NuMicro_M2351_BSP\1.0.0\Device\M2351\StdDriver\src\libmkrom.a"
+--library_type=microlib --strict --scatter ".\secure.sct"
+--import-cmse-lib-out="..\Secure\KEIL\Objects\Secure_CMSE_Lib.o"
+--import-cmse-lib-out ..\lib\nsclib.o --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Secure.map" -o .\Objects\Secure.axf

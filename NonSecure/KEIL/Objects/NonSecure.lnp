@@ -1,0 +1,12 @@
+--cpu=Cortex-M23
+".\objects\main_ns.o"
+".\objects\system_m2351.o"
+".\objects\startup_m2351.o"
+".\objects\retarget.o"
+".\objects\gpio.o"
+"..\..\Secure\lib\nsclib.o"
+".\objects\uart.o"
+--library_type=microlib --strict --scatter ".\nonsecure.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\NonSecure.map" -o .\Objects\NonSecure.axf
