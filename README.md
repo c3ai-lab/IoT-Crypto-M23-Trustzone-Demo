@@ -17,4 +17,4 @@ The following things are needed to start developing:
 1. [Nuvoton M2351 development board](http://www.nuvoton.com/hq/products/microcontrollers/arm-cortex-m23-mcus/m2351-series/m2351kiaae/?__locale=en)
 2. [OpenNuvoton Software package](https://github.com/OpenNuvoton/M2351BSP)
 3. [Keils µVision® IDE - Nuvoton edition](http://www2.keil.com/nuvoton/M0-M23)
-Follow the instructions described in the “Board Quick Start Guide.pdf”
+Follow the instructions described in the [Board Quick Start Guide.pdf](https://github.com/OpenNuvoton/M2351BSP/blob/master/NuMaker-PFM-M2351%20Board%20Quick%20Start%20Guide.pdf)
