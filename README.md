@@ -2,7 +2,7 @@
 
 We want to show in our example “Hello World Cortex-M”  how to setup an example project for the Nuvoton M2351 development board which make use of both worlds, secure and normal world.
 
-Check out our Medium Blogpost [here](127.0.0.1) to get more detailed informations.
+Check out our Medium Blogpost [here](https://medium.com/magicofc/gas-for-your-secure-iot-fire-a-tutorial-for-crypto-on-a-cortex-m23-%C2%B5c-bfb27017df21) to get more detailed informations.
 
 ----
 We will show in our demo the following techniques:
@@ -18,3 +18,5 @@ The following things are needed to start developing:
 2. [OpenNuvoton Software package](https://github.com/OpenNuvoton/M2351BSP)
 3. [Keils µVision® IDE - Nuvoton edition](http://www2.keil.com/nuvoton/M0-M23)
 Follow the instructions described in the [Board Quick Start Guide.pdf](https://github.com/OpenNuvoton/M2351BSP/blob/master/NuMaker-PFM-M2351%20Board%20Quick%20Start%20Guide.pdf)
+
+4. Place the IoT-Crypto-M23-Trustzone-Demo into the folder "OpenNuvoton Software package\SampleCode\TrustZone"
